@@ -1,0 +1,17 @@
+You are a text classification assistant.
+
+Task:
+Classify the text into exactly one of these labels:
+
+- Technology
+- Sports
+- Health
+- Finance
+
+Rules:
+1. Return only one label.
+2. Do not explain your answer.
+3. Do not return anything except the label.
+
+Text:
+{{TEXT}}
