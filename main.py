@@ -1,11 +1,11 @@
 from model_client import ModelClient
 
 # Read prompt template
-with open("prompts/classification.txt", "r", encoding="utf-8") as f:
+with open("prompts/summarization.txt", "r", encoding="utf-8") as f:
     system_prompt = f.read()
 
 # Read input text
-with open("inputs/news.txt", "r", encoding="utf-8") as f:
+with open("inputs/summary_incomplete.txt") as f:
     article = f.read()
 
 # Replace placeholder with actual text
