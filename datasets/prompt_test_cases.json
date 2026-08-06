@@ -1,0 +1,92 @@
+[
+  {
+    "id": "TC01",
+    "task": "summarization",
+    "type": "normal",
+    "input_file": "inputs/summary_normal.txt",
+    "expected_structure": {
+      "summary": "string"
+    }
+  },
+  {
+    "id": "TC02",
+    "task": "summarization",
+    "type": "long",
+    "input_file": "inputs/summary_long.txt",
+    "expected_structure": {
+      "summary": "string"
+    }
+  },
+  {
+    "id": "TC03",
+    "task": "summarization",
+    "type": "ambiguous",
+    "input_file": "inputs/summary_ambiguous.txt",
+    "expected_structure": {
+      "summary": "string"
+    }
+  },
+  {
+    "id": "TC04",
+    "task": "summarization",
+    "type": "incomplete",
+    "input_file": "inputs/summary_incomplete.txt",
+    "expected_structure": {
+      "summary": "string"
+    }
+  },
+  {
+    "id": "TC05",
+    "task": "summarization",
+    "type": "empty",
+    "input_file": "inputs/summary_empty.txt",
+    "expected_structure": {
+      "summary": "string"
+    }
+  },
+  {
+    "id": "TC06",
+    "task": "summarization",
+    "type": "malformed",
+    "input_file": "inputs/summary_malformed.txt",
+    "expected_structure": {
+      "summary": "string"
+    }
+  },
+  {
+    "id": "TC07",
+    "task": "summarization",
+    "type": "short",
+    "input_file": "inputs/summary_short.txt",
+    "expected_structure": {
+      "summary": "string"
+    }
+  },
+  {
+    "id": "TC08",
+    "task": "summarization",
+    "type": "mixed",
+    "input_file": "inputs/summary_mixed.txt",
+    "expected_structure": {
+      "summary": "string"
+    }
+  },
+  {
+    "id": "TC09",
+    "task": "summarization",
+    "type": "numbers",
+    "input_file": "inputs/summary_numbers.txt",
+    "expected_structure": {
+      "summary": "string"
+    }
+  },
+  {
+    "id": "TC10",
+    "task": "summarization",
+    "type": "special_characters",
+    "input_file": "inputs/summary_special.txt",
+    "expected_structure": {
+      "summary": "string"
+    }
+  }
+]
