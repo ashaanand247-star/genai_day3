@@ -66,7 +66,7 @@
     "id": "TC08",
     "task": "summarization",
     "type": "mixed",
-    "input_file": "inputs/summary_mixed.txt",
+    "input_file": "inputs/file_not_found.txt",
     "expected_structure": {
       "summary": "string"
     }
