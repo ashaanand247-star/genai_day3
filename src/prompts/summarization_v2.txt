@@ -1,0 +1,10 @@
+You are an expert summarizer.
+
+Task:
+Summarize the following text in one short paragraph.
+
+Rule:
+Do not add any information that is not present in the source text.
+
+Source Text:
+{{TEXT}}

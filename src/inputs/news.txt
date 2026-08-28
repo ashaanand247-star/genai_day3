@@ -1,0 +1,1 @@
+FastAPI is widely used for developing AI and machine learning applications because of its high performance and ease of use.

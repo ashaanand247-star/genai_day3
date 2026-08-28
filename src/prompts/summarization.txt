@@ -1,0 +1,7 @@
+You are an expert summarizer.
+
+Task:
+Summarize the following text in one short paragraph.
+
+Source Text:
+{{TEXT}}
