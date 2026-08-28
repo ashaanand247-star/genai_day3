@@ -1,0 +1,42 @@
+[
+    {
+        "question": "How can an employee submit a leave request?",
+        "expected_document_id": "DOC001"
+    },
+    {
+        "question": "What types of leave are available to employees?",
+        "expected_document_id": "DOC001"
+    },
+    {
+        "question": "What are the requirements for working from home?",
+        "expected_document_id": "DOC002"
+    },
+    {
+        "question": "What should employees do if they become unavailable while working remotely?",
+        "expected_document_id": "DOC002"
+    },
+    {
+        "question": "How should employees report an unexpected absence?",
+        "expected_document_id": "DOC003"
+    },
+    {
+        "question": "How should employees record their attendance?",
+        "expected_document_id": "DOC003"
+    },
+    {
+        "question": "What should a new employee complete on their first day?",
+        "expected_document_id": "DOC004"
+    },
+    {
+        "question": "What training is required during employee onboarding?",
+        "expected_document_id": "DOC004"
+    },
+    {
+        "question": "How should employees handle confidential company information?",
+        "expected_document_id": "DOC005"
+    },
+    {
+        "question": "What should employees do if they have a potential conflict of interest?",
+        "expected_document_id": "DOC005"
+    }
+]

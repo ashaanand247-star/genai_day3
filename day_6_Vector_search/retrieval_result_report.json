@@ -1,0 +1,422 @@
+[
+    {
+        "test_number": 1,
+        "question": "How can an employee submit a leave request?",
+        "expected_document_id": "DOC001",
+        "top_k": 3,
+        "results": [
+            {
+                "chunk_id": "DOC001_chunk_1",
+                "distance": 0.7966759204864502,
+                "document_id": "DOC001",
+                "title": "Employee Leave Policy",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC001_employee_leave_policy.md",
+                "updated_at": 1786452407.9151976,
+                "chunk_index": 1,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "Employees may use sick leave when they are unable to work because of illness. For an extended absence, the employee may be asked to provide appropriate supporting documentation according to company procedures. ## Emergency Leave Emergency leave may be requested when an unexpected personal or family situation requires immediate attention. Employees should inform their manager as soon as reasonably possible. ## Leave Request Process Employees should submit leave requests through the approved internal leave system. The request should include the requested dates and the type of leave."
+            },
+            {
+                "chunk_id": "DOC001_chunk_2",
+                "distance": 0.9155922532081604,
+                "document_id": "DOC001",
+                "title": "Employee Leave Policy",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC001_employee_leave_policy.md",
+                "updated_at": 1786452407.9151976,
+                "chunk_index": 2,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "Employees should submit leave requests through the approved internal leave system. The request should include the requested dates and the type of leave. Managers review requests based on team requirements and planned workloads. Employees should wait for approval before treating planned leave as confirmed. ## Responsibilities Employees are responsible for submitting accurate leave requests and keeping their manager informed about unexpected absences. Managers are responsible for reviewing leave requests fairly and communicating approval or rejection to the employee. ## Policy Review TechNova Solutions may review and update this policy when business requirements or internal procedures change."
+            },
+            {
+                "chunk_id": "DOC001_chunk_0",
+                "distance": 0.9670818448066711,
+                "document_id": "DOC001",
+                "title": "Employee Leave Policy",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC001_employee_leave_policy.md",
+                "updated_at": 1786452407.9151976,
+                "chunk_index": 0,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "# TechNova Solutions - Employee Leave Policy Document ID: DOC001 ## Purpose The Employee Leave Policy explains the types of leave available to employees at TechNova Solutions and the basic process for requesting leave. ## Annual Leave Employees can request annual leave for personal requirements, planned vacations, or other approved purposes. Employees should submit their leave request in advance whenever possible. ## Sick Leave Employees may use sick leave when they are unable to work because of illness. For an extended absence, the employee may be asked to provide appropriate supporting documentation according to company procedures. ## Emergency Leave"
+            }
+        ],
+        "passed": true
+    },
+    {
+        "test_number": 2,
+        "question": "What types of leave are available to employees?",
+        "expected_document_id": "DOC001",
+        "top_k": 3,
+        "results": [
+            {
+                "chunk_id": "DOC001_chunk_0",
+                "distance": 0.9319340586662292,
+                "document_id": "DOC001",
+                "title": "Employee Leave Policy",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC001_employee_leave_policy.md",
+                "updated_at": 1786452407.9151976,
+                "chunk_index": 0,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "# TechNova Solutions - Employee Leave Policy Document ID: DOC001 ## Purpose The Employee Leave Policy explains the types of leave available to employees at TechNova Solutions and the basic process for requesting leave. ## Annual Leave Employees can request annual leave for personal requirements, planned vacations, or other approved purposes. Employees should submit their leave request in advance whenever possible. ## Sick Leave Employees may use sick leave when they are unable to work because of illness. For an extended absence, the employee may be asked to provide appropriate supporting documentation according to company procedures. ## Emergency Leave"
+            },
+            {
+                "chunk_id": "DOC001_chunk_1",
+                "distance": 1.0036500692367554,
+                "document_id": "DOC001",
+                "title": "Employee Leave Policy",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC001_employee_leave_policy.md",
+                "updated_at": 1786452407.9151976,
+                "chunk_index": 1,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "Employees may use sick leave when they are unable to work because of illness. For an extended absence, the employee may be asked to provide appropriate supporting documentation according to company procedures. ## Emergency Leave Emergency leave may be requested when an unexpected personal or family situation requires immediate attention. Employees should inform their manager as soon as reasonably possible. ## Leave Request Process Employees should submit leave requests through the approved internal leave system. The request should include the requested dates and the type of leave."
+            },
+            {
+                "chunk_id": "DOC001_chunk_2",
+                "distance": 1.139497995376587,
+                "document_id": "DOC001",
+                "title": "Employee Leave Policy",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC001_employee_leave_policy.md",
+                "updated_at": 1786452407.9151976,
+                "chunk_index": 2,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "Employees should submit leave requests through the approved internal leave system. The request should include the requested dates and the type of leave. Managers review requests based on team requirements and planned workloads. Employees should wait for approval before treating planned leave as confirmed. ## Responsibilities Employees are responsible for submitting accurate leave requests and keeping their manager informed about unexpected absences. Managers are responsible for reviewing leave requests fairly and communicating approval or rejection to the employee. ## Policy Review TechNova Solutions may review and update this policy when business requirements or internal procedures change."
+            }
+        ],
+        "passed": true
+    },
+    {
+        "test_number": 3,
+        "question": "What are the requirements for working from home?",
+        "expected_document_id": "DOC002",
+        "top_k": 3,
+        "results": [
+            {
+                "chunk_id": "DOC002_chunk_0",
+                "distance": 1.0162920951843262,
+                "document_id": "DOC002",
+                "title": "Work From Home Policy",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC002_work_from_home_policy.md",
+                "updated_at": 1786452407.9218624,
+                "chunk_index": 0,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "# TechNova Solutions - Work From Home Policy Document ID: DOC002 ## Purpose The Work From Home Policy provides guidelines for employees who are approved to work remotely. ## Eligibility Employees may work from home when their role, team responsibilities, and business requirements allow remote work. Approval may depend on operational needs and the employee's work responsibilities. ## Work Schedule Employees working remotely are expected to follow their assigned working hours. They should remain available through approved communication channels during working hours. ## Availability"
+            },
+            {
+                "chunk_id": "DOC002_chunk_1",
+                "distance": 1.2431635856628418,
+                "document_id": "DOC002",
+                "title": "Work From Home Policy",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC002_work_from_home_policy.md",
+                "updated_at": 1786452407.9218624,
+                "chunk_index": 1,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "Employees working remotely are expected to follow their assigned working hours. They should remain available through approved communication channels during working hours. ## Availability Employees should respond to work-related messages and attend scheduled meetings while working remotely. If an employee becomes temporarily unavailable, they should inform their manager or team. ## Workspace Employees are responsible for maintaining a suitable workspace that allows them to perform their duties effectively. Company equipment should be used responsibly and protected from unauthorized access. ## Information Security"
+            },
+            {
+                "chunk_id": "DOC002_chunk_2",
+                "distance": 1.3150296211242676,
+                "document_id": "DOC002",
+                "title": "Work From Home Policy",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC002_work_from_home_policy.md",
+                "updated_at": 1786452407.9218624,
+                "chunk_index": 2,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "Employees are responsible for maintaining a suitable workspace that allows them to perform their duties effectively. Company equipment should be used responsibly and protected from unauthorized access. ## Information Security Employees must follow company security requirements while working remotely. Confidential company information should not be shared with unauthorized individuals. Employees should use approved systems and networks for accessing company resources. ## Communication Teams should use approved communication and collaboration tools for work-related discussions. Important decisions and updates should be recorded in the appropriate team channels or systems. ## Policy Review"
+            }
+        ],
+        "passed": true
+    },
+    {
+        "test_number": 4,
+        "question": "What should employees do if they become unavailable while working remotely?",
+        "expected_document_id": "DOC002",
+        "top_k": 3,
+        "results": [
+            {
+                "chunk_id": "DOC002_chunk_1",
+                "distance": 0.8051421642303467,
+                "document_id": "DOC002",
+                "title": "Work From Home Policy",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC002_work_from_home_policy.md",
+                "updated_at": 1786452407.9218624,
+                "chunk_index": 1,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "Employees working remotely are expected to follow their assigned working hours. They should remain available through approved communication channels during working hours. ## Availability Employees should respond to work-related messages and attend scheduled meetings while working remotely. If an employee becomes temporarily unavailable, they should inform their manager or team. ## Workspace Employees are responsible for maintaining a suitable workspace that allows them to perform their duties effectively. Company equipment should be used responsibly and protected from unauthorized access. ## Information Security"
+            },
+            {
+                "chunk_id": "DOC003_chunk_2",
+                "distance": 0.948271632194519,
+                "document_id": "DOC003",
+                "title": "Attendance Policy",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC003_attendance_policy.md",
+                "updated_at": 1786453056.0022128,
+                "chunk_index": 2,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "## Planned Absence Planned absences should be communicated in advance and, when applicable, submitted through the company's approved leave system. ## Remote Employees Employees working remotely should remain available during their assigned working hours and follow the same attendance and communication expectations applicable to their team. ## Responsibilities Employees are responsible for maintaining accurate attendance records and communicating unexpected absences. Managers are responsible for addressing attendance concerns consistently and discussing recurring issues with employees. ## Policy Review TechNova Solutions may review and update this policy based on operational requirements and changes to internal procedures."
+            },
+            {
+                "chunk_id": "DOC002_chunk_2",
+                "distance": 1.156511902809143,
+                "document_id": "DOC002",
+                "title": "Work From Home Policy",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC002_work_from_home_policy.md",
+                "updated_at": 1786452407.9218624,
+                "chunk_index": 2,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "Employees are responsible for maintaining a suitable workspace that allows them to perform their duties effectively. Company equipment should be used responsibly and protected from unauthorized access. ## Information Security Employees must follow company security requirements while working remotely. Confidential company information should not be shared with unauthorized individuals. Employees should use approved systems and networks for accessing company resources. ## Communication Teams should use approved communication and collaboration tools for work-related discussions. Important decisions and updates should be recorded in the appropriate team channels or systems. ## Policy Review"
+            }
+        ],
+        "passed": true
+    },
+    {
+        "test_number": 5,
+        "question": "How should employees report an unexpected absence?",
+        "expected_document_id": "DOC003",
+        "top_k": 3,
+        "results": [
+            {
+                "chunk_id": "DOC003_chunk_1",
+                "distance": 0.8879333138465881,
+                "document_id": "DOC003",
+                "title": "Attendance Policy",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC003_attendance_policy.md",
+                "updated_at": 1786453056.0022128,
+                "chunk_index": 1,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "Employees should record their attendance using the approved attendance system. Attendance records should accurately reflect the employee's working status. ## Late Arrival Employees who expect to arrive late should inform their manager or team as soon as possible. Repeated late arrivals may require a discussion with the manager. ## Unplanned Absence If an employee cannot attend work because of an unexpected situation, the employee should notify their manager or the designated team contact as soon as reasonably possible. ## Planned Absence Planned absences should be communicated in advance and, when applicable, submitted through the company's approved leave system."
+            },
+            {
+                "chunk_id": "DOC003_chunk_2",
+                "distance": 1.019327163696289,
+                "document_id": "DOC003",
+                "title": "Attendance Policy",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC003_attendance_policy.md",
+                "updated_at": 1786453056.0022128,
+                "chunk_index": 2,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "## Planned Absence Planned absences should be communicated in advance and, when applicable, submitted through the company's approved leave system. ## Remote Employees Employees working remotely should remain available during their assigned working hours and follow the same attendance and communication expectations applicable to their team. ## Responsibilities Employees are responsible for maintaining accurate attendance records and communicating unexpected absences. Managers are responsible for addressing attendance concerns consistently and discussing recurring issues with employees. ## Policy Review TechNova Solutions may review and update this policy based on operational requirements and changes to internal procedures."
+            },
+            {
+                "chunk_id": "DOC001_chunk_1",
+                "distance": 1.2163093090057373,
+                "document_id": "DOC001",
+                "title": "Employee Leave Policy",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC001_employee_leave_policy.md",
+                "updated_at": 1786452407.9151976,
+                "chunk_index": 1,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "Employees may use sick leave when they are unable to work because of illness. For an extended absence, the employee may be asked to provide appropriate supporting documentation according to company procedures. ## Emergency Leave Emergency leave may be requested when an unexpected personal or family situation requires immediate attention. Employees should inform their manager as soon as reasonably possible. ## Leave Request Process Employees should submit leave requests through the approved internal leave system. The request should include the requested dates and the type of leave."
+            }
+        ],
+        "passed": true
+    },
+    {
+        "test_number": 6,
+        "question": "How should employees record their attendance?",
+        "expected_document_id": "DOC003",
+        "top_k": 3,
+        "results": [
+            {
+                "chunk_id": "DOC003_chunk_1",
+                "distance": 0.8462986350059509,
+                "document_id": "DOC003",
+                "title": "Attendance Policy",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC003_attendance_policy.md",
+                "updated_at": 1786453056.0022128,
+                "chunk_index": 1,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "Employees should record their attendance using the approved attendance system. Attendance records should accurately reflect the employee's working status. ## Late Arrival Employees who expect to arrive late should inform their manager or team as soon as possible. Repeated late arrivals may require a discussion with the manager. ## Unplanned Absence If an employee cannot attend work because of an unexpected situation, the employee should notify their manager or the designated team contact as soon as reasonably possible. ## Planned Absence Planned absences should be communicated in advance and, when applicable, submitted through the company's approved leave system."
+            },
+            {
+                "chunk_id": "DOC003_chunk_0",
+                "distance": 0.8633122444152832,
+                "document_id": "DOC003",
+                "title": "Attendance Policy",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC003_attendance_policy.md",
+                "updated_at": 1786453056.0022128,
+                "chunk_index": 0,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "# TechNova Solutions - Attendance Policy Document ID: DOC003 ## Purpose The Attendance Policy defines the basic expectations for employee attendance, working hours, and communication regarding absences. ## Working Hours Employees are expected to follow the working hours assigned to their team or role. Employees should begin work on time and remain available during their scheduled hours. ## Attendance Recording Employees should record their attendance using the approved attendance system. Attendance records should accurately reflect the employee's working status. ## Late Arrival"
+            },
+            {
+                "chunk_id": "DOC003_chunk_2",
+                "distance": 1.0861066579818726,
+                "document_id": "DOC003",
+                "title": "Attendance Policy",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC003_attendance_policy.md",
+                "updated_at": 1786453056.0022128,
+                "chunk_index": 2,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "## Planned Absence Planned absences should be communicated in advance and, when applicable, submitted through the company's approved leave system. ## Remote Employees Employees working remotely should remain available during their assigned working hours and follow the same attendance and communication expectations applicable to their team. ## Responsibilities Employees are responsible for maintaining accurate attendance records and communicating unexpected absences. Managers are responsible for addressing attendance concerns consistently and discussing recurring issues with employees. ## Policy Review TechNova Solutions may review and update this policy based on operational requirements and changes to internal procedures."
+            }
+        ],
+        "passed": true
+    },
+    {
+        "test_number": 7,
+        "question": "What should a new employee complete on their first day?",
+        "expected_document_id": "DOC004",
+        "top_k": 3,
+        "results": [
+            {
+                "chunk_id": "DOC004_chunk_1",
+                "distance": 0.9149785041809082,
+                "document_id": "DOC004",
+                "title": "Employee Onboarding Guide",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC004_employee_onboarding_guide.md",
+                "updated_at": 1786452407.9311984,
+                "chunk_index": 1,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "## First Day On the first day, the employee should complete the required joining formalities and meet the relevant team members. The manager or assigned onboarding coordinator should explain the employee's role, responsibilities, working schedule, and immediate priorities. ## System Access Employees may require access to approved systems such as email, collaboration tools, project systems, and internal applications. Access should be provided according to the employee's role. Employees should not request or use access that is not required for their responsibilities. ## Team Introduction"
+            },
+            {
+                "chunk_id": "DOC004_chunk_3",
+                "distance": 0.9529392123222351,
+                "document_id": "DOC004",
+                "title": "Employee Onboarding Guide",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC004_employee_onboarding_guide.md",
+                "updated_at": 1786452407.9311984,
+                "chunk_index": 3,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "New employees may be required to complete company training related to security, workplace practices, tools, and their specific role. Employees should complete mandatory training within the assigned time period. ## First Week During the first week, the employee should become familiar with their responsibilities, team processes, documentation, and required tools. The manager should provide guidance and answer questions related to the employee's initial responsibilities. ## First Month During the first month, the employee should gradually take ownership of assigned tasks and become familiar with the team's regular workflow."
+            },
+            {
+                "chunk_id": "DOC004_chunk_0",
+                "distance": 0.9701447486877441,
+                "document_id": "DOC004",
+                "title": "Employee Onboarding Guide",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC004_employee_onboarding_guide.md",
+                "updated_at": 1786452407.9311984,
+                "chunk_index": 0,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "# TechNova Solutions - Employee Onboarding Guide Document ID: DOC004 ## Purpose The Employee Onboarding Guide describes the activities that help new employees understand their role, team, workplace procedures, and company resources. ## Before Joining Before the employee's joining date, the relevant team should prepare required access, equipment, and onboarding information. The employee may receive instructions about the joining process and documents that need to be completed. ## First Day On the first day, the employee should complete the required joining formalities and meet the relevant team members."
+            }
+        ],
+        "passed": true
+    },
+    {
+        "test_number": 8,
+        "question": "What training is required during employee onboarding?",
+        "expected_document_id": "DOC004",
+        "top_k": 3,
+        "results": [
+            {
+                "chunk_id": "DOC004_chunk_0",
+                "distance": 0.9855197072029114,
+                "document_id": "DOC004",
+                "title": "Employee Onboarding Guide",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC004_employee_onboarding_guide.md",
+                "updated_at": 1786452407.9311984,
+                "chunk_index": 0,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "# TechNova Solutions - Employee Onboarding Guide Document ID: DOC004 ## Purpose The Employee Onboarding Guide describes the activities that help new employees understand their role, team, workplace procedures, and company resources. ## Before Joining Before the employee's joining date, the relevant team should prepare required access, equipment, and onboarding information. The employee may receive instructions about the joining process and documents that need to be completed. ## First Day On the first day, the employee should complete the required joining formalities and meet the relevant team members."
+            },
+            {
+                "chunk_id": "DOC004_chunk_2",
+                "distance": 0.9975863099098206,
+                "document_id": "DOC004",
+                "title": "Employee Onboarding Guide",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC004_employee_onboarding_guide.md",
+                "updated_at": 1786452407.9311984,
+                "chunk_index": 2,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "Access should be provided according to the employee's role. Employees should not request or use access that is not required for their responsibilities. ## Team Introduction The manager or onboarding coordinator should introduce the new employee to the team and explain the team's communication channels, regular meetings, and working practices. ## Training New employees may be required to complete company training related to security, workplace practices, tools, and their specific role. Employees should complete mandatory training within the assigned time period. ## First Week"
+            },
+            {
+                "chunk_id": "DOC004_chunk_1",
+                "distance": 1.0315594673156738,
+                "document_id": "DOC004",
+                "title": "Employee Onboarding Guide",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC004_employee_onboarding_guide.md",
+                "updated_at": 1786452407.9311984,
+                "chunk_index": 1,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "## First Day On the first day, the employee should complete the required joining formalities and meet the relevant team members. The manager or assigned onboarding coordinator should explain the employee's role, responsibilities, working schedule, and immediate priorities. ## System Access Employees may require access to approved systems such as email, collaboration tools, project systems, and internal applications. Access should be provided according to the employee's role. Employees should not request or use access that is not required for their responsibilities. ## Team Introduction"
+            }
+        ],
+        "passed": true
+    },
+    {
+        "test_number": 9,
+        "question": "How should employees handle confidential company information?",
+        "expected_document_id": "DOC005",
+        "top_k": 3,
+        "results": [
+            {
+                "chunk_id": "DOC005_chunk_1",
+                "distance": 0.9661949872970581,
+                "document_id": "DOC005",
+                "title": "Code Of Conduct",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC005_code_of_conduct.md",
+                "updated_at": 1786452407.9341986,
+                "chunk_index": 1,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "TechNova Solutions aims to maintain a workplace where employees can work without harassment, intimidation, discrimination, or inappropriate behavior. Employees should treat others fairly and respect different opinions and working styles. ## Communication Employees should use professional language in emails, meetings, messaging platforms, and other workplace communications. Disagreements should be handled constructively and escalated through the appropriate channels when necessary. ## Confidential Information Employees may have access to company, customer, or project information as part of their responsibilities. Such information should only be accessed, used, or shared for legitimate business purposes and according to applicable company procedures. ## Conflicts of Interest"
+            },
+            {
+                "chunk_id": "DOC005_chunk_2",
+                "distance": 0.9789033532142639,
+                "document_id": "DOC005",
+                "title": "Code Of Conduct",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC005_code_of_conduct.md",
+                "updated_at": 1786452407.9341986,
+                "chunk_index": 2,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "Such information should only be accessed, used, or shared for legitimate business purposes and according to applicable company procedures. ## Conflicts of Interest Employees should disclose situations that could create a conflict between their personal interests and their responsibilities to the company. Potential conflicts should be discussed with the appropriate manager or designated company representative. ## Use of Company Resources Company equipment, systems, accounts, and other resources should be used responsibly and primarily for authorized business activities. Employees should protect company resources from unauthorized access or misuse. ## Reporting Concerns"
+            },
+            {
+                "chunk_id": "DOC002_chunk_2",
+                "distance": 1.0301676988601685,
+                "document_id": "DOC002",
+                "title": "Work From Home Policy",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC002_work_from_home_policy.md",
+                "updated_at": 1786452407.9218624,
+                "chunk_index": 2,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "Employees are responsible for maintaining a suitable workspace that allows them to perform their duties effectively. Company equipment should be used responsibly and protected from unauthorized access. ## Information Security Employees must follow company security requirements while working remotely. Confidential company information should not be shared with unauthorized individuals. Employees should use approved systems and networks for accessing company resources. ## Communication Teams should use approved communication and collaboration tools for work-related discussions. Important decisions and updates should be recorded in the appropriate team channels or systems. ## Policy Review"
+            }
+        ],
+        "passed": true
+    },
+    {
+        "test_number": 10,
+        "question": "What should employees do if they have a potential conflict of interest?",
+        "expected_document_id": "DOC005",
+        "top_k": 3,
+        "results": [
+            {
+                "chunk_id": "DOC005_chunk_2",
+                "distance": 0.9708806276321411,
+                "document_id": "DOC005",
+                "title": "Code Of Conduct",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC005_code_of_conduct.md",
+                "updated_at": 1786452407.9341986,
+                "chunk_index": 2,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "Such information should only be accessed, used, or shared for legitimate business purposes and according to applicable company procedures. ## Conflicts of Interest Employees should disclose situations that could create a conflict between their personal interests and their responsibilities to the company. Potential conflicts should be discussed with the appropriate manager or designated company representative. ## Use of Company Resources Company equipment, systems, accounts, and other resources should be used responsibly and primarily for authorized business activities. Employees should protect company resources from unauthorized access or misuse. ## Reporting Concerns"
+            },
+            {
+                "chunk_id": "DOC005_chunk_1",
+                "distance": 1.2197682857513428,
+                "document_id": "DOC005",
+                "title": "Code Of Conduct",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC005_code_of_conduct.md",
+                "updated_at": 1786452407.9341986,
+                "chunk_index": 1,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "TechNova Solutions aims to maintain a workplace where employees can work without harassment, intimidation, discrimination, or inappropriate behavior. Employees should treat others fairly and respect different opinions and working styles. ## Communication Employees should use professional language in emails, meetings, messaging platforms, and other workplace communications. Disagreements should be handled constructively and escalated through the appropriate channels when necessary. ## Confidential Information Employees may have access to company, customer, or project information as part of their responsibilities. Such information should only be accessed, used, or shared for legitimate business purposes and according to applicable company procedures. ## Conflicts of Interest"
+            },
+            {
+                "chunk_id": "DOC005_chunk_3",
+                "distance": 1.4096260070800781,
+                "document_id": "DOC005",
+                "title": "Code Of Conduct",
+                "source_path": "day5_preprocessing\\cleaned_documents\\DOC005_code_of_conduct.md",
+                "updated_at": 1786452407.9341986,
+                "chunk_index": 3,
+                "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+                "text": "Company equipment, systems, accounts, and other resources should be used responsibly and primarily for authorized business activities. Employees should protect company resources from unauthorized access or misuse. ## Reporting Concerns Employees who become aware of serious workplace concerns should report them through the appropriate company channel. Reports should be handled responsibly and information should only be shared with people who need to know. ## Responsibilities Every employee is responsible for following the Code of Conduct. Managers are responsible for promoting professional behavior and addressing concerns appropriately. ## Policy Review"
+            }
+        ],
+        "passed": true
+    }
+]
