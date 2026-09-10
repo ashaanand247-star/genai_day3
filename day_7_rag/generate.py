@@ -6,7 +6,7 @@ sys.path.append(".")
 from dotenv import load_dotenv
 from openai import OpenAI
 
-from retrieve import (
+from day_7_rag.retrieve import (
     create_chroma_client,
     get_collection,
     retrieve_chunks,
@@ -31,7 +31,7 @@ load_dotenv()
 
 GENERATION_MODEL = "openrouter/free"
 
-CHROMA_DIR = "day_7_rag/chroma_db"
+CHROMA_DIR = "day_10_retrieval/chroma_db_chunk70"
 
 COLLECTION_NAME = "employee_documents"
 
@@ -115,16 +115,13 @@ def generate_answer(
     return response.choices[0].message.content
 
 
-# Main RAG flow
+# Reusable RAG question-answering flow
 
-def main():
-
-    # Get user's question
-
-    question = input(
-        "Enter your question: "
-    )
-
+def answer_question(
+    question,
+    top_k=3,
+    filters=None
+):
 
     # Create ChromaDB client
 
@@ -146,11 +143,12 @@ def main():
     results = retrieve_chunks(
         collection,
         question,
-        top_k=3
+        top_k=top_k,
+        where=filters
     )
 
 
-    # Build allowed citations from retrieved chunks
+    # Build allowed citations
 
     allowed_citations = build_allowed_citations(
         results
@@ -161,16 +159,7 @@ def main():
 
     context = prepare_context(
         results,
-        max_chunks=3
-    )
-
-
-    # Display prepared context
-
-    print("\nPrepared context:\n")
-
-    print(
-        context
+        max_chunks=top_k
     )
 
 
@@ -182,7 +171,7 @@ def main():
     )
 
 
-    # Extract citations from the answer
+    # Extract citations
 
     citations = extract_citations(
         answer
@@ -207,8 +196,21 @@ def main():
     retrieval_scores = results["distances"][0]
 
 
-    # Check whether any retrieved chunk
-    # passes the evidence threshold
+    # Get actual retrieved source IDs
+
+    retrieved_sources = []
+
+    for metadata in results["metadatas"][0]:
+
+        source_id = (
+            f"{metadata['document_id']}:"
+            f"chunk_{metadata['chunk_index']}"
+        )
+
+        retrieved_sources.append(source_id)
+
+
+    # Check evidence threshold
 
     has_evidence = any(
         score <= EVIDENCE_THRESHOLD
@@ -216,13 +218,15 @@ def main():
     )
 
 
-    # Determine answer status
+    # Abstention message
 
     abstention_message = (
         "The provided context does not contain enough"
         " information to answer this question."
     )
 
+
+    # Determine answer status
 
     if not has_evidence:
 
@@ -255,50 +259,40 @@ def main():
         status = "answered"
 
 
-    # Create structured response
+    # Create validated structured response
 
     response = AnswerResponse(
         answer=answer,
         sources=valid_citations,
+        retrieved_sources=retrieved_sources,
         chunk_previews=chunk_previews,
         retrieval_scores=retrieval_scores,
         status=status
     )
 
 
-    # Display structured response
+    return response
+
+
+# Main RAG flow
+
+def main():
+
+    question = input(
+        "Enter your question: "
+    )
+
+
+    response = answer_question(
+        question
+    )
+
 
     print("\nStructured response:\n")
 
+
     print(
         response
-    )
-
-
-    # Display extracted citations
-
-    print("\nExtracted citations:")
-
-    print(
-        citations
-    )
-
-
-    # Display valid citations
-
-    print("\nValid citations:")
-
-    print(
-        valid_citations
-    )
-
-
-    # Display answer
-
-    print("\nGenerated answer:\n")
-
-    print(
-        answer
     )
 
 

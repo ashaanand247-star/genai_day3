@@ -1,0 +1,11 @@
+{
+    "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+    "chunk_size": 100,
+    "chunk_overlap": 20,
+    "top_k": 3,
+    "metadata_filter": null,
+    "score_threshold": 1.0,
+    "prompt_version": "day_8_current",
+    "configured_retrieval_distance_threshold": 1.2,
+    "retrieval_distance_threshold_active_in_day8_generation": false
+}

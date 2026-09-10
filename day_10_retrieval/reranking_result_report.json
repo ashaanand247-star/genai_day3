@@ -1,0 +1,603 @@
+{
+    "experiment": "Day 10 - Full Reranking Validation",
+    "objective": "Evaluate TF-IDF reranking after vector retrieval using a larger candidate pool.",
+    "baseline_configuration": {
+        "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+        "top_k": 3,
+        "retrieval_method": "Vector search"
+    },
+    "experiment_configuration": {
+        "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+        "candidate_top_k": 5,
+        "final_top_k": 3,
+        "reranking_method": "TF-IDF cosine similarity",
+        "retrieval_method": "Vector search followed by TF-IDF reranking"
+    },
+    "metrics": {
+        "baseline": {
+            "hit_rate": 1.0,
+            "mrr": 1.0
+        },
+        "reranking": {
+            "hit_rate": 1.0,
+            "mrr": 0.8833333333333332
+        },
+        "hit_rate_change": 0.0,
+        "mrr_change": -0.11666666666666681
+    },
+    "regression_check": {
+        "regression_count": 0,
+        "regressions": [],
+        "no_regressions": true
+    },
+    "latency": {
+        "batch_query_embedding_seconds": 4.192749100000128,
+        "total_vector_retrieval_seconds": 0.33167850000018007,
+        "total_reranking_seconds": 0.02974890000018604,
+        "average_vector_retrieval_seconds": 0.033167850000018005,
+        "average_reranking_seconds": 0.002974890000018604,
+        "average_experiment_latency_seconds": 0.03614274000003661
+    },
+    "question_results": [
+        {
+            "question_id": "Q1",
+            "question": "How can an employee submit a leave request?",
+            "expected_document": "DOC001",
+            "baseline_rank": 1,
+            "baseline_hit": true,
+            "experiment_rank": 1,
+            "experiment_hit": true,
+            "baseline_top_k": 3,
+            "candidate_top_k": 5,
+            "final_top_k": 3,
+            "vector_retrieval_latency_seconds": 0.27969690000008995,
+            "reranking_latency_seconds": 0.0019701000001077773,
+            "candidate_pool": [
+                {
+                    "document_id": "DOC001",
+                    "chunk_index": 1,
+                    "original_rank": 1,
+                    "original_distance": 0.798059344291687,
+                    "reranking_score": 0.20350553380909525,
+                    "final_rank": 2
+                },
+                {
+                    "document_id": "DOC001",
+                    "chunk_index": 2,
+                    "original_rank": 2,
+                    "original_distance": 0.9213309288024902,
+                    "reranking_score": 0.10634197680679813,
+                    "final_rank": null
+                },
+                {
+                    "document_id": "DOC001",
+                    "chunk_index": 0,
+                    "original_rank": 3,
+                    "original_distance": 0.9696701169013977,
+                    "reranking_score": 0.26131042403726035,
+                    "final_rank": 1
+                },
+                {
+                    "document_id": "DOC007",
+                    "chunk_index": 2,
+                    "original_rank": 4,
+                    "original_distance": 1.0722466707229614,
+                    "reranking_score": 0.13664918278340854,
+                    "final_rank": 3
+                },
+                {
+                    "document_id": "DOC006",
+                    "chunk_index": 1,
+                    "original_rank": 5,
+                    "original_distance": 1.0802770853042603,
+                    "reranking_score": 0.0797304013326949,
+                    "final_rank": null
+                }
+            ]
+        },
+        {
+            "question_id": "Q2",
+            "question": "What types of leave are available to employees?",
+            "expected_document": "DOC001",
+            "baseline_rank": 1,
+            "baseline_hit": true,
+            "experiment_rank": 1,
+            "experiment_hit": true,
+            "baseline_top_k": 3,
+            "candidate_top_k": 5,
+            "final_top_k": 3,
+            "vector_retrieval_latency_seconds": 0.002803399999947942,
+            "reranking_latency_seconds": 0.001511200000095414,
+            "candidate_pool": [
+                {
+                    "document_id": "DOC001",
+                    "chunk_index": 0,
+                    "original_rank": 1,
+                    "original_distance": 0.9435997605323792,
+                    "reranking_score": 0.33399525594876195,
+                    "final_rank": 1
+                },
+                {
+                    "document_id": "DOC001",
+                    "chunk_index": 1,
+                    "original_rank": 2,
+                    "original_distance": 1.0085262060165405,
+                    "reranking_score": 0.2269970156644925,
+                    "final_rank": 2
+                },
+                {
+                    "document_id": "DOC006",
+                    "chunk_index": 1,
+                    "original_rank": 3,
+                    "original_distance": 1.0567275285720825,
+                    "reranking_score": 0.10223903672474607,
+                    "final_rank": null
+                },
+                {
+                    "document_id": "DOC001",
+                    "chunk_index": 2,
+                    "original_rank": 4,
+                    "original_distance": 1.1442221403121948,
+                    "reranking_score": 0.16166920231490864,
+                    "final_rank": 3
+                },
+                {
+                    "document_id": "DOC006",
+                    "chunk_index": 0,
+                    "original_rank": 5,
+                    "original_distance": 1.1715971231460571,
+                    "reranking_score": 0.12703336923034772,
+                    "final_rank": null
+                }
+            ]
+        },
+        {
+            "question_id": "Q3",
+            "question": "What are the requirements for working from home?",
+            "expected_document": "DOC002",
+            "baseline_rank": 1,
+            "baseline_hit": true,
+            "experiment_rank": 1,
+            "experiment_hit": true,
+            "baseline_top_k": 3,
+            "candidate_top_k": 5,
+            "final_top_k": 3,
+            "vector_retrieval_latency_seconds": 0.0057290000002012675,
+            "reranking_latency_seconds": 0.0019280000001344888,
+            "candidate_pool": [
+                {
+                    "document_id": "DOC002",
+                    "chunk_index": 0,
+                    "original_rank": 1,
+                    "original_distance": 1.016527771949768,
+                    "reranking_score": 0.349955921915591,
+                    "final_rank": 1
+                },
+                {
+                    "document_id": "DOC002",
+                    "chunk_index": 1,
+                    "original_rank": 2,
+                    "original_distance": 1.236451268196106,
+                    "reranking_score": 0.14250495201750665,
+                    "final_rank": null
+                },
+                {
+                    "document_id": "DOC019",
+                    "chunk_index": 0,
+                    "original_rank": 3,
+                    "original_distance": 1.238777756690979,
+                    "reranking_score": 0.17039766168282952,
+                    "final_rank": 2
+                },
+                {
+                    "document_id": "DOC002",
+                    "chunk_index": 2,
+                    "original_rank": 4,
+                    "original_distance": 1.3104994297027588,
+                    "reranking_score": 0.14497632090329013,
+                    "final_rank": 3
+                },
+                {
+                    "document_id": "DOC019",
+                    "chunk_index": 3,
+                    "original_rank": 5,
+                    "original_distance": 1.3425521850585938,
+                    "reranking_score": 0.061332799408066144,
+                    "final_rank": null
+                }
+            ]
+        },
+        {
+            "question_id": "Q4",
+            "question": "What should employees do if they become unavailable while working remotely?",
+            "expected_document": "DOC002",
+            "baseline_rank": 1,
+            "baseline_hit": true,
+            "experiment_rank": 1,
+            "experiment_hit": true,
+            "baseline_top_k": 3,
+            "candidate_top_k": 5,
+            "final_top_k": 3,
+            "vector_retrieval_latency_seconds": 0.004766300000028423,
+            "reranking_latency_seconds": 0.003191699999888442,
+            "candidate_pool": [
+                {
+                    "document_id": "DOC002",
+                    "chunk_index": 1,
+                    "original_rank": 1,
+                    "original_distance": 0.8063595294952393,
+                    "reranking_score": 0.303894925797081,
+                    "final_rank": 1
+                },
+                {
+                    "document_id": "DOC003",
+                    "chunk_index": 2,
+                    "original_rank": 2,
+                    "original_distance": 0.9484584331512451,
+                    "reranking_score": 0.08634712664637227,
+                    "final_rank": null
+                },
+                {
+                    "document_id": "DOC019",
+                    "chunk_index": 3,
+                    "original_rank": 3,
+                    "original_distance": 1.0494111776351929,
+                    "reranking_score": 0.14365991012138082,
+                    "final_rank": 2
+                },
+                {
+                    "document_id": "DOC019",
+                    "chunk_index": 4,
+                    "original_rank": 4,
+                    "original_distance": 1.0746400356292725,
+                    "reranking_score": 0.062449948056414586,
+                    "final_rank": null
+                },
+                {
+                    "document_id": "DOC019",
+                    "chunk_index": 1,
+                    "original_rank": 5,
+                    "original_distance": 1.087733268737793,
+                    "reranking_score": 0.1092208101176953,
+                    "final_rank": 3
+                }
+            ]
+        },
+        {
+            "question_id": "Q5",
+            "question": "How should employees report an unexpected absence?",
+            "expected_document": "DOC003",
+            "baseline_rank": 1,
+            "baseline_hit": true,
+            "experiment_rank": 2,
+            "experiment_hit": true,
+            "baseline_top_k": 3,
+            "candidate_top_k": 5,
+            "final_top_k": 3,
+            "vector_retrieval_latency_seconds": 0.005398499999955675,
+            "reranking_latency_seconds": 0.0028454999999212305,
+            "candidate_pool": [
+                {
+                    "document_id": "DOC003",
+                    "chunk_index": 1,
+                    "original_rank": 1,
+                    "original_distance": 0.8911147713661194,
+                    "reranking_score": 0.18632492479267243,
+                    "final_rank": 2
+                },
+                {
+                    "document_id": "DOC003",
+                    "chunk_index": 2,
+                    "original_rank": 2,
+                    "original_distance": 1.0199357271194458,
+                    "reranking_score": 0.10796543296959009,
+                    "final_rank": null
+                },
+                {
+                    "document_id": "DOC015",
+                    "chunk_index": 2,
+                    "original_rank": 3,
+                    "original_distance": 1.1950420141220093,
+                    "reranking_score": 0.22921059170080646,
+                    "final_rank": 1
+                },
+                {
+                    "document_id": "DOC001",
+                    "chunk_index": 1,
+                    "original_rank": 4,
+                    "original_distance": 1.2145278453826904,
+                    "reranking_score": 0.16920158113660508,
+                    "final_rank": 3
+                },
+                {
+                    "document_id": "DOC001",
+                    "chunk_index": 2,
+                    "original_rank": 5,
+                    "original_distance": 1.2209084033966064,
+                    "reranking_score": 0.07929743560623273,
+                    "final_rank": null
+                }
+            ]
+        },
+        {
+            "question_id": "Q6",
+            "question": "How should employees record their attendance?",
+            "expected_document": "DOC003",
+            "baseline_rank": 1,
+            "baseline_hit": true,
+            "experiment_rank": 1,
+            "experiment_hit": true,
+            "baseline_top_k": 3,
+            "candidate_top_k": 5,
+            "final_top_k": 3,
+            "vector_retrieval_latency_seconds": 0.004621699999916018,
+            "reranking_latency_seconds": 0.00604380000004312,
+            "candidate_pool": [
+                {
+                    "document_id": "DOC003",
+                    "chunk_index": 1,
+                    "original_rank": 1,
+                    "original_distance": 0.8403739929199219,
+                    "reranking_score": 0.23535145293155438,
+                    "final_rank": 2
+                },
+                {
+                    "document_id": "DOC003",
+                    "chunk_index": 0,
+                    "original_rank": 2,
+                    "original_distance": 0.8569297790527344,
+                    "reranking_score": 0.3593503004908891,
+                    "final_rank": 1
+                },
+                {
+                    "document_id": "DOC003",
+                    "chunk_index": 2,
+                    "original_rank": 3,
+                    "original_distance": 1.0737295150756836,
+                    "reranking_score": 0.20539582174298152,
+                    "final_rank": 3
+                },
+                {
+                    "document_id": "DOC019",
+                    "chunk_index": 2,
+                    "original_rank": 4,
+                    "original_distance": 1.18620765209198,
+                    "reranking_score": 0.08956907004132462,
+                    "final_rank": null
+                },
+                {
+                    "document_id": "DOC027",
+                    "chunk_index": 1,
+                    "original_rank": 5,
+                    "original_distance": 1.2203022241592407,
+                    "reranking_score": 0.1485064369666095,
+                    "final_rank": null
+                }
+            ]
+        },
+        {
+            "question_id": "Q7",
+            "question": "What should a new employee complete on their first day?",
+            "expected_document": "DOC004",
+            "baseline_rank": 1,
+            "baseline_hit": true,
+            "experiment_rank": 1,
+            "experiment_hit": true,
+            "baseline_top_k": 3,
+            "candidate_top_k": 5,
+            "final_top_k": 3,
+            "vector_retrieval_latency_seconds": 0.004415299999891431,
+            "reranking_latency_seconds": 0.0019254999999702704,
+            "candidate_pool": [
+                {
+                    "document_id": "DOC004",
+                    "chunk_index": 1,
+                    "original_rank": 1,
+                    "original_distance": 0.9088704586029053,
+                    "reranking_score": 0.2124733868927961,
+                    "final_rank": 1
+                },
+                {
+                    "document_id": "DOC004",
+                    "chunk_index": 3,
+                    "original_rank": 2,
+                    "original_distance": 0.94105064868927,
+                    "reranking_score": 0.1877147290159377,
+                    "final_rank": 3
+                },
+                {
+                    "document_id": "DOC004",
+                    "chunk_index": 0,
+                    "original_rank": 3,
+                    "original_distance": 0.9665719270706177,
+                    "reranking_score": 0.19802385674012443,
+                    "final_rank": 2
+                },
+                {
+                    "document_id": "DOC004",
+                    "chunk_index": 2,
+                    "original_rank": 4,
+                    "original_distance": 0.9724416732788086,
+                    "reranking_score": 0.1804669458206301,
+                    "final_rank": null
+                },
+                {
+                    "document_id": "DOC004",
+                    "chunk_index": 4,
+                    "original_rank": 5,
+                    "original_distance": 1.2851406335830688,
+                    "reranking_score": 0.0409488414259137,
+                    "final_rank": null
+                }
+            ]
+        },
+        {
+            "question_id": "Q8",
+            "question": "What training is required during employee onboarding?",
+            "expected_document": "DOC004",
+            "baseline_rank": 1,
+            "baseline_hit": true,
+            "experiment_rank": 1,
+            "experiment_hit": true,
+            "baseline_top_k": 3,
+            "candidate_top_k": 5,
+            "final_top_k": 3,
+            "vector_retrieval_latency_seconds": 0.0051820999999563355,
+            "reranking_latency_seconds": 0.001646100000016304,
+            "candidate_pool": [
+                {
+                    "document_id": "DOC004",
+                    "chunk_index": 0,
+                    "original_rank": 1,
+                    "original_distance": 0.9807232618331909,
+                    "reranking_score": 0.12771078287385226,
+                    "final_rank": null
+                },
+                {
+                    "document_id": "DOC004",
+                    "chunk_index": 2,
+                    "original_rank": 2,
+                    "original_distance": 1.0043368339538574,
+                    "reranking_score": 0.19966281092213287,
+                    "final_rank": 1
+                },
+                {
+                    "document_id": "DOC004",
+                    "chunk_index": 1,
+                    "original_rank": 3,
+                    "original_distance": 1.0362458229064941,
+                    "reranking_score": 0.10957540368911342,
+                    "final_rank": null
+                },
+                {
+                    "document_id": "DOC004",
+                    "chunk_index": 3,
+                    "original_rank": 4,
+                    "original_distance": 1.1057074069976807,
+                    "reranking_score": 0.18516154791114595,
+                    "final_rank": 3
+                },
+                {
+                    "document_id": "DOC004",
+                    "chunk_index": 4,
+                    "original_rank": 5,
+                    "original_distance": 1.142214059829712,
+                    "reranking_score": 0.19351570233275844,
+                    "final_rank": 2
+                }
+            ]
+        },
+        {
+            "question_id": "Q9",
+            "question": "How should employees handle confidential company information?",
+            "expected_document": "DOC005",
+            "baseline_rank": 1,
+            "baseline_hit": true,
+            "experiment_rank": 3,
+            "experiment_hit": true,
+            "baseline_top_k": 3,
+            "candidate_top_k": 5,
+            "final_top_k": 3,
+            "vector_retrieval_latency_seconds": 0.008377800000062052,
+            "reranking_latency_seconds": 0.006039999999984502,
+            "candidate_pool": [
+                {
+                    "document_id": "DOC005",
+                    "chunk_index": 1,
+                    "original_rank": 1,
+                    "original_distance": 0.9625366926193237,
+                    "reranking_score": 0.1894572657512914,
+                    "final_rank": 3
+                },
+                {
+                    "document_id": "DOC005",
+                    "chunk_index": 2,
+                    "original_rank": 2,
+                    "original_distance": 0.9712828993797302,
+                    "reranking_score": 0.17659072624121427,
+                    "final_rank": null
+                },
+                {
+                    "document_id": "DOC017",
+                    "chunk_index": 1,
+                    "original_rank": 3,
+                    "original_distance": 1.0112236738204956,
+                    "reranking_score": 0.24422495598431898,
+                    "final_rank": 1
+                },
+                {
+                    "document_id": "DOC002",
+                    "chunk_index": 2,
+                    "original_rank": 4,
+                    "original_distance": 1.0250134468078613,
+                    "reranking_score": 0.21034305177470794,
+                    "final_rank": 2
+                },
+                {
+                    "document_id": "DOC017",
+                    "chunk_index": 2,
+                    "original_rank": 5,
+                    "original_distance": 1.0445733070373535,
+                    "reranking_score": 0.15216201607404556,
+                    "final_rank": null
+                }
+            ]
+        },
+        {
+            "question_id": "Q10",
+            "question": "What should employees do if they have a potential conflict of interest?",
+            "expected_document": "DOC005",
+            "baseline_rank": 1,
+            "baseline_hit": true,
+            "experiment_rank": 1,
+            "experiment_hit": true,
+            "baseline_top_k": 3,
+            "candidate_top_k": 5,
+            "final_top_k": 3,
+            "vector_retrieval_latency_seconds": 0.010687500000130967,
+            "reranking_latency_seconds": 0.002647000000024491,
+            "candidate_pool": [
+                {
+                    "document_id": "DOC005",
+                    "chunk_index": 2,
+                    "original_rank": 1,
+                    "original_distance": 0.9734172821044922,
+                    "reranking_score": 0.1607606993313378,
+                    "final_rank": 1
+                },
+                {
+                    "document_id": "DOC024",
+                    "chunk_index": 2,
+                    "original_rank": 2,
+                    "original_distance": 1.0467751026153564,
+                    "reranking_score": 0.13429946512555177,
+                    "final_rank": 3
+                },
+                {
+                    "document_id": "DOC005",
+                    "chunk_index": 1,
+                    "original_rank": 3,
+                    "original_distance": 1.2235281467437744,
+                    "reranking_score": 0.15368632520191333,
+                    "final_rank": 2
+                },
+                {
+                    "document_id": "DOC013",
+                    "chunk_index": 3,
+                    "original_rank": 4,
+                    "original_distance": 1.34707772731781,
+                    "reranking_score": 0.06486191080621943,
+                    "final_rank": null
+                },
+                {
+                    "document_id": "DOC015",
+                    "chunk_index": 1,
+                    "original_rank": 5,
+                    "original_distance": 1.373542070388794,
+                    "reranking_score": 0.0945083131489406,
+                    "final_rank": null
+                }
+            ]
+        }
+    ]
+}

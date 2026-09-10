@@ -1,0 +1,128 @@
+{
+    "experiment": "chunk_size_latency",
+    "baseline": {
+        "chunk_size": 100,
+        "overlap": 20,
+        "top_k": 3,
+        "vector_count": 134,
+        "average_retrieval_latency_seconds": 0.0025009420000242245,
+        "question_results": [
+            {
+                "question_id": "Q1",
+                "average_latency_seconds": 0.001876540000012028,
+                "runs": 5
+            },
+            {
+                "question_id": "Q2",
+                "average_latency_seconds": 0.002837120000003779,
+                "runs": 5
+            },
+            {
+                "question_id": "Q3",
+                "average_latency_seconds": 0.002884300000005169,
+                "runs": 5
+            },
+            {
+                "question_id": "Q4",
+                "average_latency_seconds": 0.0020948800000041958,
+                "runs": 5
+            },
+            {
+                "question_id": "Q5",
+                "average_latency_seconds": 0.003255200000239711,
+                "runs": 5
+            },
+            {
+                "question_id": "Q6",
+                "average_latency_seconds": 0.0017782199998691794,
+                "runs": 5
+            },
+            {
+                "question_id": "Q7",
+                "average_latency_seconds": 0.0023888199999419157,
+                "runs": 5
+            },
+            {
+                "question_id": "Q8",
+                "average_latency_seconds": 0.002688300000045274,
+                "runs": 5
+            },
+            {
+                "question_id": "Q9",
+                "average_latency_seconds": 0.0029434400001264295,
+                "runs": 5
+            },
+            {
+                "question_id": "Q10",
+                "average_latency_seconds": 0.0022625999999945634,
+                "runs": 5
+            }
+        ]
+    },
+    "experiment_configuration": {
+        "chunk_size": 70,
+        "overlap": 20,
+        "top_k": 3,
+        "vector_count": 192,
+        "average_retrieval_latency_seconds": 0.0030276160000357777,
+        "question_results": [
+            {
+                "question_id": "Q1",
+                "average_latency_seconds": 0.002075939999849652,
+                "runs": 5
+            },
+            {
+                "question_id": "Q2",
+                "average_latency_seconds": 0.002848660000017844,
+                "runs": 5
+            },
+            {
+                "question_id": "Q3",
+                "average_latency_seconds": 0.0024745799995798735,
+                "runs": 5
+            },
+            {
+                "question_id": "Q4",
+                "average_latency_seconds": 0.0019367000000784173,
+                "runs": 5
+            },
+            {
+                "question_id": "Q5",
+                "average_latency_seconds": 0.0031282600000849927,
+                "runs": 5
+            },
+            {
+                "question_id": "Q6",
+                "average_latency_seconds": 0.005326680000325723,
+                "runs": 5
+            },
+            {
+                "question_id": "Q7",
+                "average_latency_seconds": 0.0031618400000297696,
+                "runs": 5
+            },
+            {
+                "question_id": "Q8",
+                "average_latency_seconds": 0.003450820000216481,
+                "runs": 5
+            },
+            {
+                "question_id": "Q9",
+                "average_latency_seconds": 0.0028912400000990603,
+                "runs": 5
+            },
+            {
+                "question_id": "Q10",
+                "average_latency_seconds": 0.0029814400000759632,
+                "runs": 5
+            }
+        ]
+    },
+    "comparison": {
+        "latency_change_seconds": 0.0005266740000115532,
+        "latency_change_percent": 21.059024959653275,
+        "vector_count_change_percent": 43.28358208955223
+    },
+    "runs_per_question": 5,
+    "note": "Latency measures ChromaDB vector retrieval only. Query embedding generation is excluded because the same cached query embeddings are used for both configurations."
+}

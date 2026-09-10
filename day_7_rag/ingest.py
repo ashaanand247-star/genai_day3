@@ -180,6 +180,49 @@ def index_embeddings(
     return indexed_count, failed_documents
 
 
+# Reusable ingestion flow for FastAPI
+
+def ingest_file(file_reference):
+
+    embedding_records = load_embeddings(
+        EMBEDDINGS_FILE
+    )
+
+    selected_records = select_approved_documents(
+        embedding_records,
+        APPROVED_DOCUMENTS
+    )
+
+    selected_documents = {
+        record["document_id"]
+        for record in selected_records
+    }
+
+    chroma_client = create_chroma_client(
+        CHROMA_DIR
+    )
+
+    collection = create_chroma_collection(
+        chroma_client,
+        COLLECTION_NAME
+    )
+
+    indexed_count, failed_documents = index_embeddings(
+        collection,
+        selected_records
+    )
+
+    return {
+        "document_id": list(selected_documents),
+        "chunk_count": indexed_count,
+        "status": (
+            "processed"
+            if not failed_documents
+            else "partially_processed"
+        )
+    }
+
+
 # Main ingestion flow
 
 def main():
@@ -263,4 +306,5 @@ def main():
 # Program entry point
 
 if __name__ == "__main__":
+
     main()

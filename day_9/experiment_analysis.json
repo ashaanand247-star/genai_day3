@@ -1,0 +1,79 @@
+[
+    {
+        "test_number": 3,
+        "variable_changed": "top_k",
+        "baseline": {
+            "top_k": 3
+        },
+        "experiment": {
+            "top_k": 5
+        },
+        "observation": "Increasing top_k from 3 to 5 retrieved additional chunks, including semantically related content from another document.",
+        "conclusion": "A larger top_k increases the amount of retrieved evidence but can also introduce additional cross-document content."
+    },
+    {
+        "test_number": 4,
+        "variable_changed": "metadata_filter",
+        "baseline": {
+            "metadata_filter": "none",
+            "top_k": 3
+        },
+        "experiment": {
+            "metadata_filter": "DOC002",
+            "top_k": 3
+        },
+        "observation": "The metadata filter restricted all retrieved results to DOC002.",
+        "conclusion": "Metadata filtering can remove cross-document competition and focus retrieval on the selected document."
+    },
+    {
+        "test_number": 5,
+        "variable_changed": "query_rewrite",
+        "baseline": {
+            "query": "How should employees report an unexpected absence?",
+            "top_k": 3
+        },
+        "experiment": {
+            "query": "How should employees report an unplanned absence by notifying their manager or designated team contact?",
+            "top_k": 3
+        },
+        "observation": "The rewritten query retrieved DOC003 at rank 1 and used terminology closer to the policy, such as 'unplanned absence' and 'notify manager'.",
+        "conclusion": "Query rewriting can improve retrieval by using terminology that more closely matches the source document."
+    },
+    {
+        "test_number": 8,
+        "variable_changed": "chunk_size",
+        "baseline": {
+            "chunk_size": 100,
+            "overlap": 20,
+            "chunk_count": 5
+        },
+        "experiment": {
+            "chunk_size": 150,
+            "overlap": 20,
+            "chunk_count": 3
+        },
+        "observation": "Increasing the chunk size reduced the number of chunks from 5 to 3. Both baseline and experiment retrieved DOC004 as the top document.",
+        "conclusion": "The larger chunk size reduced the number of chunks but did not improve the top-document ranking for this question."
+    },
+    {
+        "test_number": 9,
+        "variable_changed": "metadata_filter",
+        "baseline": {
+            "metadata_filter": "none",
+            "top_k": 3
+        },
+        "experiment": {
+            "metadata_filter": "DOC005",
+            "top_k": 3
+        },
+        "observation": "The metadata filter returned three DOC005 chunks. The highest-ranked chunk directly contained the Conflicts of Interest section.",
+        "conclusion": "Restricting retrieval to the expected document can focus the retrieved evidence and remove results from other documents."
+    },
+    {
+        "baseline_metrics": {
+            "hit_rate_at_3": 1.0,
+            "mrr": 1.0
+        },
+        "overall_conclusion": "The baseline retrieval system already performed strongly on the 10-question evaluation set. The experiments showed how top_k, metadata filtering, query rewriting, and chunk size affect retrieval behavior. The experiments should be interpreted as retrieval-behavior observations rather than claiming that every change improved the baseline metrics."
+    }
+]

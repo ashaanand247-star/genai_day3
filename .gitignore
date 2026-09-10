@@ -15,3 +15,9 @@ day_7_rag/chroma_db/
 
 # IDE files
 .vscode/
+# SQLite observability database
+day_11_fastapi/observability.db
+# Day 10 ChromaDB
+day_10_retrieval/chroma_db_chunk70/
+# Day 10 ChromaDB
+day_10_retrieval/chroma_db_chunk70/

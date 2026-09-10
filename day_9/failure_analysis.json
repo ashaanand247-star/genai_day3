@@ -1,0 +1,47 @@
+[
+    {
+        "test_number": 3,
+        "question": "What are the requirements for working from home?",
+        "expected_document_id": "DOC002",
+        "failure_type": "excessive_context",
+        "root_cause_hypothesis": "The baseline top_k of 3 may retrieve additional semantically related remote-work content from other documents, increasing context without necessarily improving the evidence for DOC002.",
+        "experiment": "Increase top_k from 3 to 5.",
+        "measurement": "Compare the retrieved documents and distances before and after increasing top_k. Check whether additional DOC002 evidence is retrieved and whether unrelated documents are introduced."
+    },
+    {
+        "test_number": 4,
+        "question": "What should employees do if they become unavailable while working remotely?",
+        "expected_document_id": "DOC002",
+        "failure_type": "missing_metadata",
+        "root_cause_hypothesis": "Semantically related content from other documents may compete with DOC002 during retrieval even though the expected source is known.",
+        "experiment": "Restrict retrieval to DOC002 using a metadata filter.",
+        "measurement": "Compare the baseline retrieval results with the filtered results and check whether the expected DOC002 evidence moves into or remains at the top ranking."
+    },
+    {
+        "test_number": 5,
+        "question": "How should employees report an unexpected absence?",
+        "expected_document_id": "DOC003",
+        "failure_type": "vocabulary_mismatch",
+        "root_cause_hypothesis": "The question uses the phrase 'unexpected absence', while the policy uses terminology such as 'unplanned absence' and explicitly mentions notifying the manager or designated team contact.",
+        "experiment": "Rewrite the query using terminology closer to the policy.",
+        "measurement": "Compare the ranking of DOC003 before and after query rewriting. Check whether the rewritten query retrieves the relevant DOC003 chunk at a higher rank."
+    },
+    {
+        "test_number": 8,
+        "question": "What training is required during employee onboarding?",
+        "expected_document_id": "DOC004",
+        "failure_type": "poor_chunk_boundary",
+        "root_cause_hypothesis": "The baseline chunk size of 100 may divide related onboarding information across multiple chunks, affecting how much relevant training context is contained in each retrieved chunk.",
+        "experiment": "Increase chunk_size from 100 to 150 while keeping overlap at 20.",
+        "measurement": "Compare the number of chunks and the top retrieved results for chunk_size 100 versus 150. Check whether the training-specific evidence is retrieved at a better rank."
+    },
+    {
+        "test_number": 9,
+        "question": "What should employees do if they have a potential conflict of interest?",
+        "expected_document_id": "DOC005",
+        "failure_type": "missing_metadata",
+        "root_cause_hypothesis": "Semantically related content from other policy documents may compete with DOC005 even though the relevant conflict-of-interest information is contained in DOC005.",
+        "experiment": "Restrict retrieval to DOC005 using a metadata filter.",
+        "measurement": "Compare unrestricted retrieval with DOC005-filtered retrieval. Check whether the relevant Conflicts of Interest chunk is retrieved and whether cross-document competition is removed."
+    }
+]

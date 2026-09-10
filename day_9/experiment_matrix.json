@@ -1,0 +1,48 @@
+[
+    {
+        "test_number": 3,
+        "baseline": {
+            "top_k": 3
+        },
+        "variable_changed": "query_rewrite",
+        "experiment": "Rewrite the query to be more specific about work-from-home eligibility, working hours, and remote-work requirements.",
+        "expected_effect": "Check whether a more focused query improves the similarity of the relevant DOC002 chunk."
+    },
+    {
+        "test_number": 4,
+        "baseline": {
+            "top_k": 3
+        },
+        "variable_changed": "top_k",
+        "experiment": "Decrease top_k from 3 to 2.",
+        "expected_effect": "Check whether reducing the number of retrieved chunks removes the unnecessary DOC003 context."
+    },
+    {
+        "test_number": 5,
+        "baseline": {
+            "top_k": 3
+        },
+        "variable_changed": "query_rewrite",
+        "experiment": "Rewrite the query using terminology closer to the policy, such as 'unplanned absence' and 'notify manager'.",
+        "expected_effect": "Check whether more specific policy vocabulary reduces retrieval of the semantically related DOC001 chunk."
+    },
+    {
+        "test_number": 8,
+        "baseline": {
+            "chunk_size": 100,
+            "overlap": 20
+        },
+        "variable_changed": "chunk_size",
+        "experiment": "Change chunk_size from 100 to 70 while keeping overlap at 20.",
+        "expected_effect": "Check whether smaller chunk boundaries improve the ranking of the training-specific chunk."
+    },
+    {
+        "test_number": 9,
+        "baseline": {
+            "top_k": 3
+        },
+        "variable_changed": "top_k",
+        "experiment": "Decrease top_k from 3 to 2.",
+        "expected_effect": "Check whether reducing the number of retrieved chunks removes the unrelated DOC002 confidential-information chunk."
+    }
+]
