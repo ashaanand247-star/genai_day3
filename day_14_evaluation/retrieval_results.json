@@ -1,0 +1,410 @@
+{
+  "input_file": "day_13_evaluation\\results\\eval_20260911T074518Z.json",
+  "metrics": {
+    "total_cases": 25,
+    "applicable_cases": 19,
+    "error_cases": 0,
+    "not_applicable_cases": 6,
+    "hit_rate": 1.0,
+    "recall_at_k": 0.9035087719298246,
+    "mrr": 0.9473684210526315
+  },
+  "cases": [
+    {
+      "case_id": "CASE001",
+      "category": "answerable",
+      "expected_sources": [
+        "DOC001"
+      ],
+      "retrieved_sources": [
+        "DOC001:chunk_2",
+        "DOC001:chunk_1",
+        "DOC006:chunk_2"
+      ],
+      "hit": true,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE002",
+      "category": "answerable",
+      "expected_sources": [
+        "DOC002"
+      ],
+      "retrieved_sources": [
+        "DOC002:chunk_1",
+        "DOC003:chunk_2",
+        "DOC002:chunk_2"
+      ],
+      "hit": true,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE003",
+      "category": "answerable",
+      "expected_sources": [
+        "DOC003"
+      ],
+      "retrieved_sources": [
+        "DOC003:chunk_1",
+        "DOC003:chunk_0",
+        "DOC003:chunk_3"
+      ],
+      "hit": true,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE004",
+      "category": "answerable",
+      "expected_sources": [
+        "DOC004"
+      ],
+      "retrieved_sources": [
+        "DOC004:chunk_3",
+        "DOC004:chunk_1",
+        "DOC004:chunk_4"
+      ],
+      "hit": true,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE005",
+      "category": "answerable",
+      "expected_sources": [
+        "DOC005"
+      ],
+      "retrieved_sources": [
+        "DOC005:chunk_2",
+        "DOC021:chunk_4",
+        "DOC017:chunk_1"
+      ],
+      "hit": true,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE006",
+      "category": "answerable",
+      "expected_sources": [
+        "DOC003"
+      ],
+      "retrieved_sources": [
+        "DOC003:chunk_1",
+        "DOC003:chunk_2",
+        "DOC003:chunk_0"
+      ],
+      "hit": true,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE007",
+      "category": "answerable",
+      "expected_sources": [
+        "DOC030"
+      ],
+      "retrieved_sources": [
+        "DOC030:chunk_3",
+        "DOC030:chunk_4",
+        "DOC012:chunk_3"
+      ],
+      "hit": true,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE008",
+      "category": "answerable",
+      "expected_sources": [
+        "DOC027"
+      ],
+      "retrieved_sources": [
+        "DOC027:chunk_3",
+        "DOC027:chunk_1",
+        "DOC014:chunk_4"
+      ],
+      "hit": true,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE009",
+      "category": "answerable",
+      "expected_sources": [
+        "DOC029"
+      ],
+      "retrieved_sources": [
+        "DOC029:chunk_1",
+        "DOC029:chunk_4",
+        "DOC029:chunk_3"
+      ],
+      "hit": true,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE010",
+      "category": "answerable",
+      "expected_sources": [
+        "DOC008"
+      ],
+      "retrieved_sources": [
+        "DOC008:chunk_1",
+        "DOC008:chunk_0",
+        "DOC008:chunk_3"
+      ],
+      "hit": true,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE011",
+      "category": "unanswerable",
+      "expected_sources": [],
+      "retrieved_sources": [
+        "DOC001:chunk_0",
+        "DOC006:chunk_1",
+        "DOC006:chunk_2"
+      ],
+      "hit": null,
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "grade": "NOT_APPLICABLE"
+    },
+    {
+      "case_id": "CASE012",
+      "category": "unanswerable",
+      "expected_sources": [],
+      "retrieved_sources": [
+        "DOC002:chunk_1",
+        "DOC019:chunk_0",
+        "DOC002:chunk_0"
+      ],
+      "hit": null,
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "grade": "NOT_APPLICABLE"
+    },
+    {
+      "case_id": "CASE013",
+      "category": "unanswerable",
+      "expected_sources": [],
+      "retrieved_sources": [
+        "DOC016:chunk_3",
+        "DOC016:chunk_4",
+        "DOC014:chunk_2"
+      ],
+      "hit": null,
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "grade": "NOT_APPLICABLE"
+    },
+    {
+      "case_id": "CASE014",
+      "category": "unanswerable",
+      "expected_sources": [],
+      "retrieved_sources": [
+        "DOC013:chunk_6",
+        "DOC006:chunk_0",
+        "DOC005:chunk_0"
+      ],
+      "hit": null,
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "grade": "NOT_APPLICABLE"
+    },
+    {
+      "case_id": "CASE015",
+      "category": "unanswerable",
+      "expected_sources": [],
+      "retrieved_sources": [
+        "DOC002:chunk_0",
+        "DOC019:chunk_0",
+        "DOC004:chunk_1"
+      ],
+      "hit": null,
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "grade": "NOT_APPLICABLE"
+    },
+    {
+      "case_id": "CASE016",
+      "category": "ambiguous",
+      "expected_sources": [
+        "DOC002",
+        "DOC019"
+      ],
+      "retrieved_sources": [
+        "DOC003:chunk_3",
+        "DOC019:chunk_0",
+        "DOC002:chunk_0"
+      ],
+      "hit": true,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 0.5,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE017",
+      "category": "ambiguous",
+      "expected_sources": [
+        "DOC015",
+        "DOC017",
+        "DOC029"
+      ],
+      "retrieved_sources": [
+        "DOC015:chunk_4",
+        "DOC018:chunk_3",
+        "DOC014:chunk_1"
+      ],
+      "hit": true,
+      "recall_at_k": 0.3333333333333333,
+      "reciprocal_rank": 1.0,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE018",
+      "category": "ambiguous",
+      "expected_sources": [],
+      "retrieved_sources": [
+        "DOC010:chunk_2",
+        "DOC006:chunk_2",
+        "DOC014:chunk_5"
+      ],
+      "hit": null,
+      "recall_at_k": null,
+      "reciprocal_rank": null,
+      "grade": "NOT_APPLICABLE"
+    },
+    {
+      "case_id": "CASE019",
+      "category": "ambiguous",
+      "expected_sources": [
+        "DOC004",
+        "DOC012",
+        "DOC030"
+      ],
+      "retrieved_sources": [
+        "DOC030:chunk_1",
+        "DOC030:chunk_4",
+        "DOC030:chunk_2"
+      ],
+      "hit": true,
+      "recall_at_k": 0.3333333333333333,
+      "reciprocal_rank": 1.0,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE020",
+      "category": "multi-document",
+      "expected_sources": [
+        "DOC002",
+        "DOC003"
+      ],
+      "retrieved_sources": [
+        "DOC002:chunk_1",
+        "DOC003:chunk_3",
+        "DOC019:chunk_1"
+      ],
+      "hit": true,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE021",
+      "category": "multi-document",
+      "expected_sources": [
+        "DOC026",
+        "DOC027"
+      ],
+      "retrieved_sources": [
+        "DOC014:chunk_5",
+        "DOC026:chunk_2",
+        "DOC027:chunk_2"
+      ],
+      "hit": true,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 0.5,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE022",
+      "category": "multi-document",
+      "expected_sources": [
+        "DOC002",
+        "DOC029"
+      ],
+      "retrieved_sources": [
+        "DOC029:chunk_4",
+        "DOC029:chunk_7",
+        "DOC029:chunk_3"
+      ],
+      "hit": true,
+      "recall_at_k": 0.5,
+      "reciprocal_rank": 1.0,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE023",
+      "category": "adversarial",
+      "expected_sources": [
+        "DOC002"
+      ],
+      "retrieved_sources": [
+        "DOC002:chunk_0",
+        "DOC002:chunk_3",
+        "DOC002:chunk_2"
+      ],
+      "hit": true,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE024",
+      "category": "adversarial",
+      "expected_sources": [
+        "DOC029"
+      ],
+      "retrieved_sources": [
+        "DOC029:chunk_1",
+        "DOC029:chunk_0",
+        "DOC029:chunk_2"
+      ],
+      "hit": true,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE025",
+      "category": "adversarial",
+      "expected_sources": [
+        "DOC001"
+      ],
+      "retrieved_sources": [
+        "DOC001:chunk_3",
+        "DOC001:chunk_2",
+        "DOC001:chunk_0"
+      ],
+      "hit": true,
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "grade": "PASS"
+    }
+  ]
+}

@@ -825,3 +825,240 @@ Example:
     "message": "Document not found"
   }
 }
+
+---
+
+# Day 13 — Golden Evaluation Dataset and Runner
+
+## Objective
+
+Create a representative golden evaluation dataset and a reproducible evaluation runner to measure the quality of the RAG system consistently.
+
+## What Was Completed
+
+### 1. Evaluation Case Format
+
+Defined a Pydantic `EvaluationCase` model in:
+
+`day_13_evaluation/models.py`
+
+Each evaluation case contains:
+
+- `case_id`
+- `question`
+- `category`
+- `expected_source_ids`
+- `answerability`
+- `expected_facts`
+- `answer_notes`
+
+### 2. Golden Evaluation Dataset
+
+Created:
+
+`day_13_evaluation/golden_set.jsonl`
+
+The dataset contains 25 cases using the approved document corpus.
+
+| Category | Cases |
+|---|---:|
+| Answerable | 10 |
+| Unanswerable | 5 |
+| Ambiguous | 4 |
+| Multi-document | 3 |
+| Adversarial | 3 |
+| **Total** | **25** |
+
+The cases are designed to test normal answering, insufficient evidence, ambiguity, multi-document reasoning, and false-premise/adversarial questions.
+
+### 3. Dataset Review
+
+Created:
+
+`day_13_evaluation/review_notes.md`
+
+The dataset was manually reviewed for:
+
+- Question clarity
+- Correct category
+- Expected source IDs
+- Answerability
+- Expected facts
+- Scoreability
+
+A correction was documented for `CASE025`, an adversarial leave-policy question containing a false premise.
+
+### 4. Evaluation Runner
+
+Created:
+
+`day_13_evaluation/run_evals.py`
+
+The runner reads the golden dataset and sends every question to the existing FastAPI `/ask` endpoint.
+
+It reuses the existing RAG pipeline rather than implementing a second RAG flow.
+
+Evaluation flow:
+
+```text
+golden_set.jsonl
+       ↓
+run_evals.py
+       ↓
+FastAPI /ask
+       ↓
+Existing RAG pipeline
+       ↓
+Evaluation result
+```
+
+---
+
+# Day 14 — RAG Evaluation, Scorecard, and Regression Checks
+
+## Objective
+
+Build an automated evaluation and regression framework around the Day 13 golden evaluation dataset to measure retrieval quality, answer quality, failures, latency, and configuration regressions.
+
+## What Was Completed
+
+### 1. Retrieval Grader
+
+Created:
+
+`day_14_evaluation/retrieval_grader.py`
+
+The retrieval grader evaluates:
+
+- Hit Rate
+- Recall@3
+- Mean Reciprocal Rank (MRR)
+- Retrieval errors
+- Not-applicable cases
+
+Baseline results:
+
+| Metric | Result |
+|---|---:|
+| Hit Rate | 1.000 |
+| Recall@3 | 0.904 |
+| MRR | 0.947 |
+
+### 2. Answer Grader
+
+Created:
+
+`day_14_evaluation/answer_grader.py`
+
+The answer grader evaluates:
+
+- Answerability accuracy
+- Expected fact coverage
+- Citation presence
+- Citation validity
+- Abstention behavior
+- Answer pass rate
+
+Baseline results:
+
+| Metric | Result |
+|---|---:|
+| Answerability | 0.720 |
+| Expected Facts | 0.781 |
+| Citation Validity | 1.000 |
+| Answer Pass Rate | 0.640 |
+
+### 3. Review-Friendly Evaluation Report
+
+Created:
+
+`day_14_evaluation/review_report.py`
+
+The report combines retrieval and answer evaluation results for each case.
+
+It also records:
+
+- Latency
+- Failure category
+- Failure reason
+
+The report automatically identifies the top failure categories from the evaluation results.
+
+### 4. Failure Analysis
+
+The evaluation identified the following top failure categories:
+
+| Failure Category | Cases |
+|---|---:|
+| Over-abstention on ambiguous or multi-document cases | 4 |
+| Partial expected-fact coverage | 2 |
+| Over-abstention on adversarial false-premise cases | 2 |
+
+### 5. Evaluation Scorecard
+
+Created:
+
+`day_14_evaluation/scorecard.py`
+
+The scorecard consolidates retrieval and answer metrics into a single evaluation summary.
+
+It also includes:
+
+- Failure analysis
+- Average latency
+- Minimum latency
+- Maximum latency
+- Evaluation workload cost proxy
+
+### 6. Regression Checks
+
+Created:
+
+`day_14_evaluation/regression_check.py`
+
+Minimum acceptable thresholds were defined for the main retrieval and answer metrics.
+
+The normal baseline configuration passed all regression checks.
+
+A deliberately weakened configuration using:
+
+`top_k = 1`
+
+was also tested.
+
+The weakened configuration reduced retrieval performance:
+
+| Metric | Baseline | Weakened |
+|---|---:|---:|
+| Hit Rate | 1.000 | 0.895 |
+| Recall@3 | 0.904 | 0.772 |
+| MRR | 0.947 | 0.895 |
+
+The regression checker correctly detected the degradation and returned:
+
+`REGRESSION CHECK: FAIL`
+
+The original baseline configuration was then restored and verified with:
+
+`REGRESSION CHECK: PASS`
+
+## Day 14 Evaluation Flow
+
+```text
+Day 13 Golden Set
+       ↓
+RAG Evaluation Results
+       ↓
+┌───────────────────────┐
+│ Retrieval Grader      │
+│ Answer Grader         │
+└───────────────────────┘
+       ↓
+Review Report
+       ↓
+Scorecard
+       ↓
+Regression Checks
+       ↓
+PASS / FAIL
+```

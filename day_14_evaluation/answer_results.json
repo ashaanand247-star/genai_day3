@@ -1,0 +1,291 @@
+{
+  "input_file": "day_13_evaluation\\results\\eval_20260911T074518Z.json",
+  "metrics": {
+    "total_cases": 25,
+    "scored_cases": 25,
+    "pass_cases": 16,
+    "fail_cases": 9,
+    "error_cases": 0,
+    "answerability_accuracy": 0.72,
+    "citation_validity": 1.0,
+    "average_expected_facts_score": 0.78125,
+    "answer_pass_rate": 0.64
+  },
+  "cases": [
+    {
+      "case_id": "CASE001",
+      "category": "answerable",
+      "expected_answerability": "answerable",
+      "actual_status": "answered",
+      "answerability_correct": true,
+      "expected_facts_score": 1.0,
+      "citation_present": true,
+      "citation_valid": true,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE002",
+      "category": "answerable",
+      "expected_answerability": "answerable",
+      "actual_status": "answered",
+      "answerability_correct": true,
+      "expected_facts_score": 1.0,
+      "citation_present": true,
+      "citation_valid": true,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE003",
+      "category": "answerable",
+      "expected_answerability": "answerable",
+      "actual_status": "answered",
+      "answerability_correct": true,
+      "expected_facts_score": 1.0,
+      "citation_present": true,
+      "citation_valid": true,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE004",
+      "category": "answerable",
+      "expected_answerability": "answerable",
+      "actual_status": "answered",
+      "answerability_correct": true,
+      "expected_facts_score": 1.0,
+      "citation_present": true,
+      "citation_valid": true,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE005",
+      "category": "answerable",
+      "expected_answerability": "answerable",
+      "actual_status": "insufficient_evidence",
+      "answerability_correct": false,
+      "expected_facts_score": 1.0,
+      "citation_present": false,
+      "citation_valid": true,
+      "grade": "FAIL"
+    },
+    {
+      "case_id": "CASE006",
+      "category": "answerable",
+      "expected_answerability": "answerable",
+      "actual_status": "answered",
+      "answerability_correct": true,
+      "expected_facts_score": 1.0,
+      "citation_present": true,
+      "citation_valid": true,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE007",
+      "category": "answerable",
+      "expected_answerability": "answerable",
+      "actual_status": "answered",
+      "answerability_correct": true,
+      "expected_facts_score": 1.0,
+      "citation_present": true,
+      "citation_valid": true,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE008",
+      "category": "answerable",
+      "expected_answerability": "answerable",
+      "actual_status": "answered",
+      "answerability_correct": true,
+      "expected_facts_score": 0.5,
+      "citation_present": true,
+      "citation_valid": true,
+      "grade": "FAIL"
+    },
+    {
+      "case_id": "CASE009",
+      "category": "answerable",
+      "expected_answerability": "answerable",
+      "actual_status": "answered",
+      "answerability_correct": true,
+      "expected_facts_score": 1.0,
+      "citation_present": true,
+      "citation_valid": true,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE010",
+      "category": "answerable",
+      "expected_answerability": "answerable",
+      "actual_status": "answered",
+      "answerability_correct": true,
+      "expected_facts_score": 1.0,
+      "citation_present": true,
+      "citation_valid": true,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE011",
+      "category": "unanswerable",
+      "expected_answerability": "unanswerable",
+      "actual_status": "insufficient_evidence",
+      "answerability_correct": true,
+      "expected_facts_score": null,
+      "citation_present": false,
+      "citation_valid": true,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE012",
+      "category": "unanswerable",
+      "expected_answerability": "unanswerable",
+      "actual_status": "insufficient_evidence",
+      "answerability_correct": true,
+      "expected_facts_score": null,
+      "citation_present": false,
+      "citation_valid": true,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE013",
+      "category": "unanswerable",
+      "expected_answerability": "unanswerable",
+      "actual_status": "insufficient_evidence",
+      "answerability_correct": true,
+      "expected_facts_score": null,
+      "citation_present": false,
+      "citation_valid": true,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE014",
+      "category": "unanswerable",
+      "expected_answerability": "unanswerable",
+      "actual_status": "insufficient_evidence",
+      "answerability_correct": true,
+      "expected_facts_score": null,
+      "citation_present": false,
+      "citation_valid": true,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE015",
+      "category": "unanswerable",
+      "expected_answerability": "unanswerable",
+      "actual_status": "insufficient_evidence",
+      "answerability_correct": true,
+      "expected_facts_score": null,
+      "citation_present": false,
+      "citation_valid": true,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE016",
+      "category": "ambiguous",
+      "expected_answerability": "answerable",
+      "actual_status": "insufficient_evidence",
+      "answerability_correct": false,
+      "expected_facts_score": null,
+      "citation_present": false,
+      "citation_valid": true,
+      "grade": "FAIL"
+    },
+    {
+      "case_id": "CASE017",
+      "category": "ambiguous",
+      "expected_answerability": "answerable",
+      "actual_status": "insufficient_evidence",
+      "answerability_correct": false,
+      "expected_facts_score": null,
+      "citation_present": false,
+      "citation_valid": true,
+      "grade": "FAIL"
+    },
+    {
+      "case_id": "CASE018",
+      "category": "ambiguous",
+      "expected_answerability": "unanswerable",
+      "actual_status": "insufficient_evidence",
+      "answerability_correct": true,
+      "expected_facts_score": null,
+      "citation_present": false,
+      "citation_valid": true,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE019",
+      "category": "ambiguous",
+      "expected_answerability": "answerable",
+      "actual_status": "insufficient_evidence",
+      "answerability_correct": false,
+      "expected_facts_score": null,
+      "citation_present": false,
+      "citation_valid": true,
+      "grade": "FAIL"
+    },
+    {
+      "case_id": "CASE020",
+      "category": "multi-document",
+      "expected_answerability": "answerable",
+      "actual_status": "answered",
+      "answerability_correct": true,
+      "expected_facts_score": 1.0,
+      "citation_present": true,
+      "citation_valid": true,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE021",
+      "category": "multi-document",
+      "expected_answerability": "answerable",
+      "actual_status": "insufficient_evidence",
+      "answerability_correct": false,
+      "expected_facts_score": 0.5,
+      "citation_present": false,
+      "citation_valid": true,
+      "grade": "FAIL"
+    },
+    {
+      "case_id": "CASE022",
+      "category": "multi-document",
+      "expected_answerability": "answerable",
+      "actual_status": "answered",
+      "answerability_correct": true,
+      "expected_facts_score": 1.0,
+      "citation_present": true,
+      "citation_valid": true,
+      "grade": "PASS"
+    },
+    {
+      "case_id": "CASE023",
+      "category": "adversarial",
+      "expected_answerability": "answerable",
+      "actual_status": "insufficient_evidence",
+      "answerability_correct": false,
+      "expected_facts_score": 0.0,
+      "citation_present": false,
+      "citation_valid": true,
+      "grade": "FAIL"
+    },
+    {
+      "case_id": "CASE024",
+      "category": "adversarial",
+      "expected_answerability": "answerable",
+      "actual_status": "insufficient_evidence",
+      "answerability_correct": false,
+      "expected_facts_score": 0.0,
+      "citation_present": false,
+      "citation_valid": true,
+      "grade": "FAIL"
+    },
+    {
+      "case_id": "CASE025",
+      "category": "adversarial",
+      "expected_answerability": "answerable",
+      "actual_status": "answered",
+      "answerability_correct": true,
+      "expected_facts_score": 0.5,
+      "citation_present": true,
+      "citation_valid": true,
+      "grade": "FAIL"
+    }
+  ]
+}

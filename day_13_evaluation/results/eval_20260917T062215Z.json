@@ -1,0 +1,636 @@
+{
+  "evaluation_timestamp": "2026-09-17T06:22:15.056432+00:00",
+  "configuration": {
+    "base_url": "http://127.0.0.1:8000",
+    "top_k": 1,
+    "timeout_seconds": 120,
+    "generation_model": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+    "prompt_version": "day_8_current",
+    "golden_set": "C:\\Users\\MYPC\\Desktop\\Pythonprojects\\gen_ai_day5\\day_13_evaluation\\golden_set.jsonl",
+    "config_file": "day_13_evaluation\\evaluation_config_regression_test.json"
+  },
+  "case_count": 25,
+  "results": [
+    {
+      "case_id": "CASE001",
+      "question": "How should an employee submit a leave request?",
+      "category": "answerable",
+      "expected_source_ids": [
+        "DOC001"
+      ],
+      "expected_answerability": "answerable",
+      "answer": "An employee should submit the leave request through the approved internal leave system, including the requested dates and type of leave. [Source: DOC001_employee_leave_policy.md | Document: DOC001 | Chunk: 2]",
+      "sources": [
+        "[Source: DOC001_employee_leave_policy.md | Document: DOC001 | Chunk: 2]"
+      ],
+      "retrieved_sources": [
+        "DOC001:chunk_2"
+      ],
+      "chunk_previews": [
+        "leave may be requested when an unexpected personal or family situation requires immediate attention. Employees should inform their manager as soon as reasonably possible. ## Leave Request Process Employees should submit leave requests through the approved internal leave system. The request should include the requested dates and the type of leave. Managers review requests based on team requirements and planned workloads. Employees should wait for approval before treating planned leave"
+      ],
+      "retrieval_scores": [
+        0.7389197945594788
+      ],
+      "status": "answered",
+      "request_id": "2b55987e-b95b-4009-8627-6ed30672e314",
+      "latency_ms": 9697.59,
+      "error": null
+    },
+    {
+      "case_id": "CASE002",
+      "question": "What should a remote employee do if they become temporarily unavailable during working hours?",
+      "category": "answerable",
+      "expected_source_ids": [
+        "DOC002"
+      ],
+      "expected_answerability": "answerable",
+      "answer": "If an employee becomes temporarily unavailable, they should inform their manager or team. [Source: DOC002_work_from_home_policy.md | Document: DOC002 | Chunk: 1]",
+      "sources": [
+        "[Source: DOC002_work_from_home_policy.md | Document: DOC002 | Chunk: 1]"
+      ],
+      "retrieved_sources": [
+        "DOC002:chunk_1"
+      ],
+      "chunk_previews": [
+        "operational needs and the employee's work responsibilities. ## Work Schedule Employees working remotely are expected to follow their assigned working hours. They should remain available through approved communication channels during working hours. ## Availability Employees should respond to work-related messages and attend scheduled meetings while working remotely. If an employee becomes temporarily unavailable, they should inform their manager or team. ## Workspace Employees are responsible for maintaining a suitable workspace"
+      ],
+      "retrieval_scores": [
+        0.713384211063385
+      ],
+      "status": "answered",
+      "request_id": "15a40058-535b-4841-8a5b-09f1ea9e369e",
+      "latency_ms": 5696.39,
+      "error": null
+    },
+    {
+      "case_id": "CASE003",
+      "question": "How should employees record their attendance?",
+      "category": "answerable",
+      "expected_source_ids": [
+        "DOC003"
+      ],
+      "expected_answerability": "answerable",
+      "answer": "Employees should record their attendance using the approved attendance system. [Source: DOC003_attendance_policy.md | Document: DOC003 | Chunk: 1]",
+      "sources": [
+        "[Source: DOC003_attendance_policy.md | Document: DOC003 | Chunk: 1]"
+      ],
+      "retrieved_sources": [
+        "DOC003:chunk_1"
+      ],
+      "chunk_previews": [
+        "and remain available during their scheduled hours. ## Attendance Recording Employees should record their attendance using the approved attendance system. Attendance records should accurately reflect the employee's working status. ## Late Arrival Employees who expect to arrive late should inform their manager or team as soon as possible. Repeated late arrivals may require a discussion with the manager. ## Unplanned Absence If an employee cannot attend work because of an"
+      ],
+      "retrieval_scores": [
+        0.6979961395263672
+      ],
+      "status": "answered",
+      "request_id": "79197d20-f992-48ad-b063-be139a4fe605",
+      "latency_ms": 7560.98,
+      "error": null
+    },
+    {
+      "case_id": "CASE004",
+      "question": "What should a manager explain to a new employee on the first day?",
+      "category": "answerable",
+      "expected_source_ids": [
+        "DOC004"
+      ],
+      "expected_answerability": "answerable",
+      "answer": "The manager should introduce the new employee to the team and explain the team's communication channels, regular meetings, and working practices. [Source: DOC004_employee_onboarding_guide.md | Document: DOC004 | Chunk: 3]",
+      "sources": [
+        "[Source: DOC004_employee_onboarding_guide.md | Document: DOC004 | Chunk: 3]"
+      ],
+      "retrieved_sources": [
+        "DOC004:chunk_3"
+      ],
+      "chunk_previews": [
+        "Introduction The manager or onboarding coordinator should introduce the new employee to the team and explain the team's communication channels, regular meetings, and working practices. ## Training New employees may be required to complete company training related to security, workplace practices, tools, and their specific role. Employees should complete mandatory training within the assigned time period. ## First Week During the first week, the employee should become familiar with their"
+      ],
+      "retrieval_scores": [
+        0.939318835735321
+      ],
+      "status": "answered",
+      "request_id": "63ecaf74-7de5-4038-995f-e8eb412073b2",
+      "latency_ms": 12376.01,
+      "error": null
+    },
+    {
+      "case_id": "CASE005",
+      "question": "How should employees handle confidential company, customer, or project information?",
+      "category": "answerable",
+      "expected_source_ids": [
+        "DOC005"
+      ],
+      "expected_answerability": "answerable",
+      "answer": "Employees may have access to company, customer, or project information as part of their responsibilities. Such information should only be accessed, used, or shared for legitimate business purposes and according to applicable company procedures. [Source: DOC005_code_of_conduct.md | Document: DOC005 | Chunk: 2]",
+      "sources": [
+        "[Source: DOC005_code_of_conduct.md | Document: DOC005 | Chunk: 2]"
+      ],
+      "retrieved_sources": [
+        "DOC005:chunk_2"
+      ],
+      "chunk_previews": [
+        "meetings, messaging platforms, and other workplace communications. Disagreements should be handled constructively and escalated through the appropriate channels when necessary. ## Confidential Information Employees may have access to company, customer, or project information as part of their responsibilities. Such information should only be accessed, used, or shared for legitimate business purposes and according to applicable company procedures. ## Conflicts of Interest Employees should disclose situations that could create a conflict"
+      ],
+      "retrieval_scores": [
+        0.7317391633987427
+      ],
+      "status": "answered",
+      "request_id": "e2054b1d-35a3-4c94-85ee-c582fc31c726",
+      "latency_ms": 8681.88,
+      "error": null
+    },
+    {
+      "case_id": "CASE006",
+      "question": "What should employees do when they expect to arrive late?",
+      "category": "answerable",
+      "expected_source_ids": [
+        "DOC003"
+      ],
+      "expected_answerability": "answerable",
+      "answer": "Employees who expect to arrive late should inform their manager or team as soon as possible. [Source: Attendance Policy | Document: DOC003 | Chunk: 1]",
+      "sources": [],
+      "retrieved_sources": [
+        "DOC003:chunk_1"
+      ],
+      "chunk_previews": [
+        "and remain available during their scheduled hours. ## Attendance Recording Employees should record their attendance using the approved attendance system. Attendance records should accurately reflect the employee's working status. ## Late Arrival Employees who expect to arrive late should inform their manager or team as soon as possible. Repeated late arrivals may require a discussion with the manager. ## Unplanned Absence If an employee cannot attend work because of an"
+      ],
+      "retrieval_scores": [
+        0.8449144959449768
+      ],
+      "status": "insufficient_evidence",
+      "request_id": "6fd95240-70d6-410c-a5e9-ae5c8bc73569",
+      "latency_ms": 4427.06,
+      "error": null
+    },
+    {
+      "case_id": "CASE007",
+      "question": "What should employees do if a completed training course is not recorded correctly?",
+      "category": "answerable",
+      "expected_source_ids": [
+        "DOC030"
+      ],
+      "expected_answerability": "answerable",
+      "answer": "The provided context does not contain enough information to answer this question.",
+      "sources": [],
+      "retrieved_sources": [
+        "DOC030:chunk_3"
+      ],
+      "chunk_previews": [
+        "and other learning materials. Employees should use the materials provided through approved company systems. ## Assessments Some courses may include quizzes, tests, or other assessments. Employees should complete assessments according to the instructions provided with the course. ## Completion Records Completed training activities may be recorded automatically in the training portal. Employees should verify that required training shows the correct completion status. If a completed course is not recorded correctly,"
+      ],
+      "retrieval_scores": [
+        0.7590113878250122
+      ],
+      "status": "insufficient_evidence",
+      "request_id": "7a77968a-d32e-4015-9171-693188966779",
+      "latency_ms": 10301.31,
+      "error": null
+    },
+    {
+      "case_id": "CASE008",
+      "question": "What should an employee do if a company asset is lost or stolen?",
+      "category": "answerable",
+      "expected_source_ids": [
+        "DOC027"
+      ],
+      "expected_answerability": "answerable",
+      "answer": "An employee should report the lost or stolen company asset as soon as possible. [Source: DOC027_asset_management_policy.md | Document: DOC027 | Chunk: 3]",
+      "sources": [
+        "[Source: DOC027_asset_management_policy.md | Document: DOC027 | Chunk: 3]"
+      ],
+      "retrieved_sources": [
+        "DOC027:chunk_3"
+      ],
+      "chunk_previews": [
+        "When an employee changes roles or equipment is reassigned, the asset record should be updated through the appropriate process. Employees should return assets when instructed to support a transfer or reassignment. ## Lost or Damaged Assets Employees should report lost, stolen, or significantly damaged company assets as soon as possible. The appropriate team may review the incident and determine the required next steps. ## Asset Return Company assets should be"
+      ],
+      "retrieval_scores": [
+        0.6174578666687012
+      ],
+      "status": "answered",
+      "request_id": "cd303801-393a-442a-b034-645ac7ad06d9",
+      "latency_ms": 58080.22,
+      "error": null
+    },
+    {
+      "case_id": "CASE009",
+      "question": "How should customer information be stored?",
+      "category": "answerable",
+      "expected_source_ids": [
+        "DOC029"
+      ],
+      "expected_answerability": "answerable",
+      "answer": "User Safety: safe",
+      "sources": [],
+      "retrieved_sources": [
+        "DOC029:chunk_1"
+      ],
+      "chunk_previews": [
+        "and authorized users. ## Data Collection Employees should collect only the customer information required for a legitimate business purpose. Information should be entered accurately into approved company systems. ## Data Storage Customer information should be stored only in approved company systems and locations. Employees should not copy customer information to unauthorized personal devices, applications, or storage services. ## Data Sharing Customer information should only be shared with authorized employees, teams,"
+      ],
+      "retrieval_scores": [
+        0.7988407611846924
+      ],
+      "status": "insufficient_evidence",
+      "request_id": "440c8af6-bb87-40a2-aa51-ac416a902b2a",
+      "latency_ms": 6921.12,
+      "error": null
+    },
+    {
+      "case_id": "CASE010",
+      "question": "What should employees do before making business travel arrangements?",
+      "category": "answerable",
+      "expected_source_ids": [
+        "DOC008"
+      ],
+      "expected_answerability": "answerable",
+      "answer": "The provided context does not contain enough information to answer this question.",
+      "sources": [],
+      "retrieved_sources": [
+        "DOC008:chunk_1"
+      ],
+      "chunk_previews": [
+        "destination, and other relevant details. ## Transportation Employees should use reasonable and cost-effective transportation options for business travel. The appropriate transportation method may depend on the distance, location, business requirement, and travel schedule. ## Accommodation Employees should use approved accommodation options where available. Accommodation should be selected based on reasonable cost, location, safety, and business requirements. ## Travel Expenses Reasonable business travel expenses may be reimbursed when they are supported"
+      ],
+      "retrieval_scores": [
+        0.9556114673614502
+      ],
+      "status": "insufficient_evidence",
+      "request_id": "719a711a-b208-4ad3-8edd-2eef554069f1",
+      "latency_ms": 68789.42,
+      "error": null
+    },
+    {
+      "case_id": "CASE011",
+      "question": "What is the company's exact annual leave entitlement in days for every employee?",
+      "category": "unanswerable",
+      "expected_source_ids": [],
+      "expected_answerability": "unanswerable",
+      "answer": "The provided context does not contain enough information to answer this question.",
+      "sources": [],
+      "retrieved_sources": [
+        "DOC001:chunk_0"
+      ],
+      "chunk_previews": [
+        "# TechNova Solutions - Employee Leave Policy Document ID: DOC001 ## Purpose The Employee Leave Policy explains the types of leave available to employees at TechNova Solutions and the basic process for requesting leave. ## Annual Leave Employees can request annual leave for personal requirements, planned vacations, or other approved purposes. Employees should submit their leave request in advance whenever possible. ## Sick Leave Employees may use sick leave when"
+      ],
+      "retrieval_scores": [
+        1.2301619052886963
+      ],
+      "status": "insufficient_evidence",
+      "request_id": "00b89c02-e2fc-404f-8aaf-1221a7532278",
+      "latency_ms": 4001.29,
+      "error": null
+    },
+    {
+      "case_id": "CASE012",
+      "question": "What is the exact monthly salary of an employee working remotely?",
+      "category": "unanswerable",
+      "expected_source_ids": [],
+      "expected_answerability": "unanswerable",
+      "answer": "The provided context does not contain enough information to answer this question.",
+      "sources": [],
+      "retrieved_sources": [
+        "DOC002:chunk_1"
+      ],
+      "chunk_previews": [
+        "operational needs and the employee's work responsibilities. ## Work Schedule Employees working remotely are expected to follow their assigned working hours. They should remain available through approved communication channels during working hours. ## Availability Employees should respond to work-related messages and attend scheduled meetings while working remotely. If an employee becomes temporarily unavailable, they should inform their manager or team. ## Workspace Employees are responsible for maintaining a suitable workspace"
+      ],
+      "retrieval_scores": [
+        1.2541582584381104
+      ],
+      "status": "insufficient_evidence",
+      "request_id": "7f328bc6-a277-4f50-becb-8e892cfa8bba",
+      "latency_ms": 5052.73,
+      "error": null
+    },
+    {
+      "case_id": "CASE013",
+      "question": "What is the Wi-Fi password for the company's office network?",
+      "category": "unanswerable",
+      "expected_source_ids": [],
+      "expected_answerability": "unanswerable",
+      "answer": "The provided context does not contain enough information to answer this question.",
+      "sources": [],
+      "retrieved_sources": [
+        "DOC016:chunk_3"
+      ],
+      "chunk_previews": [
+        "consume network resources and may introduce security risks. ## Security Employees should be cautious when accessing websites, links, and online services. Suspicious websites, downloads, or security warnings should be reported through the appropriate IT or security channel. ## Remote Access Employees accessing company resources remotely should use approved access methods and follow applicable security requirements. Employees should avoid accessing sensitive company resources through unauthorized devices or networks. ## Monitoring Company"
+      ],
+      "retrieval_scores": [
+        1.3307139873504639
+      ],
+      "status": "insufficient_evidence",
+      "request_id": "9301d803-589c-4103-8953-4e7fa9aecdef",
+      "latency_ms": 40769.54,
+      "error": null
+    },
+    {
+      "case_id": "CASE014",
+      "question": "Who is the current CEO of TechNova Solutions?",
+      "category": "unanswerable",
+      "expected_source_ids": [],
+      "expected_answerability": "unanswerable",
+      "answer": "The provided context does not contain enough information to answer this question.",
+      "sources": [],
+      "retrieved_sources": [
+        "DOC013:chunk_6"
+      ],
+      "chunk_previews": [
+        "TechNova Solutions may update these guidelines when IT systems, support procedures, or security requirements change."
+      ],
+      "retrieval_scores": [
+        0.9952710270881653
+      ],
+      "status": "insufficient_evidence",
+      "request_id": "37585a76-9a0d-4a7f-bba5-cc2f074d9bb7",
+      "latency_ms": 23344.09,
+      "error": null
+    },
+    {
+      "case_id": "CASE015",
+      "question": "What is the employee's exact home address?",
+      "category": "unanswerable",
+      "expected_source_ids": [],
+      "expected_answerability": "unanswerable",
+      "answer": "The provided context does not contain enough information to answer this question.",
+      "sources": [],
+      "retrieved_sources": [
+        "DOC002:chunk_0"
+      ],
+      "chunk_previews": [
+        "# TechNova Solutions - Work From Home Policy Document ID: DOC002 ## Purpose The Work From Home Policy provides guidelines for employees who are approved to work remotely. ## Eligibility Employees may work from home when their role, team responsibilities, and business requirements allow remote work. Approval may depend on operational needs and the employee's work responsibilities. ## Work Schedule Employees working remotely are expected to follow their assigned working"
+      ],
+      "retrieval_scores": [
+        1.477765440940857
+      ],
+      "status": "insufficient_evidence",
+      "request_id": "42b572ba-3983-4d37-9ba3-73670cce7759",
+      "latency_ms": 2579.42,
+      "error": null
+    },
+    {
+      "case_id": "CASE016",
+      "question": "What is the policy for remote employees?",
+      "category": "ambiguous",
+      "expected_source_ids": [
+        "DOC002",
+        "DOC019"
+      ],
+      "expected_answerability": "answerable",
+      "answer": "The provided context does not contain enough information to answer this question.",
+      "sources": [],
+      "retrieved_sources": [
+        "DOC003:chunk_3"
+      ],
+      "chunk_previews": [
+        "applicable, submitted through the company's approved leave system. ## Remote Employees Employees working remotely should remain available during their assigned working hours and follow the same attendance and communication expectations applicable to their team. ## Responsibilities Employees are responsible for maintaining accurate attendance records and communicating unexpected absences. Managers are responsible for addressing attendance concerns consistently and discussing recurring issues with employees. ## Policy Review TechNova Solutions may review and"
+      ],
+      "retrieval_scores": [
+        1.0205390453338623
+      ],
+      "status": "insufficient_evidence",
+      "request_id": "064dd094-7013-4876-b0c1-663c0998c70d",
+      "latency_ms": 31550.12,
+      "error": null
+    },
+    {
+      "case_id": "CASE017",
+      "question": "What are the rules about security?",
+      "category": "ambiguous",
+      "expected_source_ids": [
+        "DOC015",
+        "DOC017",
+        "DOC029"
+      ],
+      "expected_answerability": "answerable",
+      "answer": "The provided context does not contain enough information to answer this question.",
+      "sources": [],
+      "retrieved_sources": [
+        "DOC015:chunk_4"
+      ],
+      "chunk_previews": [
+        "should not disable required security controls without authorization. ## Reporting Security Concerns Employees should report suspected security incidents as soon as possible. Examples may include a lost company device, suspicious login activity, suspected phishing, or accidental disclosure of company information. ## Responsibilities Employees are responsible for protecting their accounts and following applicable security requirements. The IT and security teams are responsible for providing appropriate security controls, guidance, and support. ##"
+      ],
+      "retrieval_scores": [
+        1.335299015045166
+      ],
+      "status": "insufficient_evidence",
+      "request_id": "72dd4215-5baa-40e4-b493-25163cfdeae9",
+      "latency_ms": 4708.96,
+      "error": null
+    },
+    {
+      "case_id": "CASE018",
+      "question": "What should the employee do?",
+      "category": "ambiguous",
+      "expected_source_ids": [],
+      "expected_answerability": "unanswerable",
+      "answer": "The provided context does not contain enough information to answer this question.",
+      "sources": [],
+      "retrieved_sources": [
+        "DOC010:chunk_2"
+      ],
+      "chunk_previews": [
+        "discuss completed work, achievements, challenges, collaboration, and progress toward agreed goals. The discussion should provide an opportunity for the employee to ask questions and share feedback. ## Feedback Managers should provide constructive feedback based on the employee's work and responsibilities. Employees are encouraged to discuss areas where they need additional guidance or resources. ## Development Plan When appropriate, the manager and employee may create a development plan that identifies skills,"
+      ],
+      "retrieval_scores": [
+        1.288210391998291
+      ],
+      "status": "insufficient_evidence",
+      "request_id": "2c616070-ba38-4510-ad35-fd0e4b0c63eb",
+      "latency_ms": 7598.25,
+      "error": null
+    },
+    {
+      "case_id": "CASE019",
+      "question": "What training is required?",
+      "category": "ambiguous",
+      "expected_source_ids": [
+        "DOC004",
+        "DOC012",
+        "DOC030"
+      ],
+      "expected_answerability": "answerable",
+      "answer": "The provided context does not contain enough information to answer this question.",
+      "sources": [],
+      "retrieved_sources": [
+        "DOC030:chunk_1"
+      ],
+      "chunk_previews": [
+        "with another person. ## Training Dashboard The training dashboard displays assigned courses, available learning resources, and the progress of completed training activities. Employees should review the dashboard regularly to identify pending training requirements. ## Assigned Training Some training courses may be mandatory based on an employee's role, team, or company requirements. Employees should complete assigned training within the specified completion period. ## Course Enrollment Employees may enroll in available courses"
+      ],
+      "retrieval_scores": [
+        1.2738662958145142
+      ],
+      "status": "insufficient_evidence",
+      "request_id": "04822170-0114-4ffe-9473-cfe1fbaa5398",
+      "latency_ms": 12216.48,
+      "error": null
+    },
+    {
+      "case_id": "CASE020",
+      "question": "What should a remote employee do about working hours and attendance?",
+      "category": "multi-document",
+      "expected_source_ids": [
+        "DOC002",
+        "DOC003"
+      ],
+      "expected_answerability": "answerable",
+      "answer": "Remote employees are expected to follow their assigned working hours and remain available through approved communication channels during working hours. They should also respond to work-related messages and attend scheduled meetings. If they become temporarily unavailable, they should inform their manager or team.\n\n[Source: DOC002_work_from_home_policy.md | Document: DOC002 | Chunk: 1]",
+      "sources": [
+        "[Source: DOC002_work_from_home_policy.md | Document: DOC002 | Chunk: 1]"
+      ],
+      "retrieved_sources": [
+        "DOC002:chunk_1"
+      ],
+      "chunk_previews": [
+        "operational needs and the employee's work responsibilities. ## Work Schedule Employees working remotely are expected to follow their assigned working hours. They should remain available through approved communication channels during working hours. ## Availability Employees should respond to work-related messages and attend scheduled meetings while working remotely. If an employee becomes temporarily unavailable, they should inform their manager or team. ## Workspace Employees are responsible for maintaining a suitable workspace"
+      ],
+      "retrieval_scores": [
+        0.8924335241317749
+      ],
+      "status": "answered",
+      "request_id": "766d0f84-258b-43dd-87f3-874a14dd9eb9",
+      "latency_ms": 4163.42,
+      "error": null
+    },
+    {
+      "case_id": "CASE021",
+      "question": "What should an employee do with company equipment when leaving the company?",
+      "category": "multi-document",
+      "expected_source_ids": [
+        "DOC026",
+        "DOC027"
+      ],
+      "expected_answerability": "answerable",
+      "answer": "Employees must return company equipment when their employment ends, following the applicable exit procedure. [Source: DOC014_laptop_usage_policy.md | Document: DOC014 | Chunk: 5]",
+      "sources": [
+        "[Source: DOC014_laptop_usage_policy.md | Document: DOC014 | Chunk: 5]"
+      ],
+      "retrieved_sources": [
+        "DOC014:chunk_5"
+      ],
+      "chunk_previews": [
+        "employee should report the incident to the appropriate IT or security team as soon as possible. ## Return of Equipment Employees must return company equipment when requested or when their employment or assignment ends, according to the applicable exit procedure. ## Responsibilities Employees are responsible for taking reasonable care of assigned equipment and following security requirements. The IT team is responsible for maintaining applicable technical controls and providing support for"
+      ],
+      "retrieval_scores": [
+        0.8093016147613525
+      ],
+      "status": "answered",
+      "request_id": "57f3d3af-bebc-4838-9d99-692424206a1d",
+      "latency_ms": 1669.52,
+      "error": null
+    },
+    {
+      "case_id": "CASE022",
+      "question": "What security practices apply when handling customer data while working remotely?",
+      "category": "multi-document",
+      "expected_source_ids": [
+        "DOC002",
+        "DOC029"
+      ],
+      "expected_answerability": "answerable",
+      "answer": "When working remotely, employees must ensure customer information cannot be viewed or accessed by unauthorized individuals. [Source: DOC029_customer_data_handling.md | Document: DOC029 | Chunk: 4]\n\nCustomer information should only be accessed through approved systems and secure channels as stated in the provided context. [Source: DOC029_customer_data_handling.md | Document: DOC029 | Chunk: 4]\n\nCustomer information should also be retained according to applicable company requirements and approved business processes, and information no longer required should be handled according to applicable retention and disposal procedures. [Source: DOC029_customer_data_handling.md | Document: DOC029 | Chunk: 4]",
+      "sources": [
+        "[Source: DOC029_customer_data_handling.md | Document: DOC029 | Chunk: 4]",
+        "[Source: DOC029_customer_data_handling.md | Document: DOC029 | Chunk: 4]",
+        "[Source: DOC029_customer_data_handling.md | Document: DOC029 | Chunk: 4]"
+      ],
+      "retrieved_sources": [
+        "DOC029:chunk_4"
+      ],
+      "chunk_previews": [
+        "immediately through the designated security channel. ## Data Retention Customer information should be retained according to applicable company requirements and approved business processes. Information that is no longer required should be handled according to the applicable retention and disposal procedures. ## Remote Work Employees working remotely must ensure that customer information cannot be viewed or accessed by unauthorized individuals. Customer information should only be accessed through approved systems and secure"
+      ],
+      "retrieval_scores": [
+        0.7286150455474854
+      ],
+      "status": "answered",
+      "request_id": "d008ba29-8479-48b6-b588-20e0e4160186",
+      "latency_ms": 10988.94,
+      "error": null
+    },
+    {
+      "case_id": "CASE023",
+      "question": "The work-from-home policy says confidential company information may be shared with family members at home. What are the sharing rules?",
+      "category": "adversarial",
+      "expected_source_ids": [
+        "DOC002"
+      ],
+      "expected_answerability": "answerable",
+      "answer": "The provided context does not contain enough information to answer this question.",
+      "sources": [],
+      "retrieved_sources": [
+        "DOC002:chunk_0"
+      ],
+      "chunk_previews": [
+        "# TechNova Solutions - Work From Home Policy Document ID: DOC002 ## Purpose The Work From Home Policy provides guidelines for employees who are approved to work remotely. ## Eligibility Employees may work from home when their role, team responsibilities, and business requirements allow remote work. Approval may depend on operational needs and the employee's work responsibilities. ## Work Schedule Employees working remotely are expected to follow their assigned working"
+      ],
+      "retrieval_scores": [
+        1.1412321329116821
+      ],
+      "status": "insufficient_evidence",
+      "request_id": "ee91848e-8d25-4a76-993f-2e84f872377f",
+      "latency_ms": 3465.69,
+      "error": null
+    },
+    {
+      "case_id": "CASE024",
+      "question": "The customer data guidelines allow employees to copy customer information to personal cloud storage for convenience. What does the policy require?",
+      "category": "adversarial",
+      "expected_source_ids": [
+        "DOC029"
+      ],
+      "expected_answerability": "answerable",
+      "answer": "The policy requires that employees must not copy customer information to unauthorized personal devices, applications, or storage services. [Source: DOC029_customer_data_handling.md | Document: DOC029 | Chunk: 1]",
+      "sources": [
+        "[Source: DOC029_customer_data_handling.md | Document: DOC029 | Chunk: 1]"
+      ],
+      "retrieved_sources": [
+        "DOC029:chunk_1"
+      ],
+      "chunk_previews": [
+        "and authorized users. ## Data Collection Employees should collect only the customer information required for a legitimate business purpose. Information should be entered accurately into approved company systems. ## Data Storage Customer information should be stored only in approved company systems and locations. Employees should not copy customer information to unauthorized personal devices, applications, or storage services. ## Data Sharing Customer information should only be shared with authorized employees, teams,"
+      ],
+      "retrieval_scores": [
+        0.9665192365646362
+      ],
+      "status": "answered",
+      "request_id": "35242b9e-7637-4a4f-bbf9-fd0a44997680",
+      "latency_ms": 9857.64,
+      "error": null
+    },
+    {
+      "case_id": "CASE025",
+      "question": "The leave policy says planned leave is automatically confirmed as soon as an employee submits a request. Is that correct?",
+      "category": "adversarial",
+      "expected_source_ids": [
+        "DOC001"
+      ],
+      "expected_answerability": "answerable",
+      "answer": "No, that is not correct. According to the leave policy, employees should wait for approval before treating planned leave as confirmed. It is not automatically confirmed upon submission.\n\n[Source: DOC001_employee_leave_policy.md | Document: DOC001 | Chunk: 3]",
+      "sources": [
+        "[Source: DOC001_employee_leave_policy.md | Document: DOC001 | Chunk: 3]"
+      ],
+      "retrieved_sources": [
+        "DOC001:chunk_3"
+      ],
+      "chunk_previews": [
+        "leave. Managers review requests based on team requirements and planned workloads. Employees should wait for approval before treating planned leave as confirmed. ## Responsibilities Employees are responsible for submitting accurate leave requests and keeping their manager informed about unexpected absences. Managers are responsible for reviewing leave requests fairly and communicating approval or rejection to the employee. ## Policy Review TechNova Solutions may review and update this policy when business requirements"
+      ],
+      "retrieval_scores": [
+        0.9425634741783142
+      ],
+      "status": "answered",
+      "request_id": "2e3d24e8-e5ec-4ab6-a83a-ed79ca113402",
+      "latency_ms": 2045.72,
+      "error": null
+    }
+  ]
+}

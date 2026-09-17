@@ -1,0 +1,8 @@
+{
+    "base_url": "http://127.0.0.1:8000",
+    "top_k": 3,
+    "timeout_seconds": 120,
+    "generation_model": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+    "prompt_version": "day_8_current"
+}

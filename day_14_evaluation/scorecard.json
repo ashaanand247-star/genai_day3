@@ -1,0 +1,39 @@
+{
+  "evaluation": "Day 14 RAG Evaluation Scorecard",
+  "case_summary": {
+    "total_cases": 25,
+    "passed_cases": 16,
+    "failed_cases": 9,
+    "error_cases": 0
+  },
+  "retrieval_metrics": {
+    "hit_rate": 1.0,
+    "recall_at_k": 0.9035087719298246,
+    "mrr": 0.9473684210526315
+  },
+  "answer_metrics": {
+    "answerability_accuracy": 0.72,
+    "expected_facts_score": 0.78125,
+    "citation_validity": 1.0,
+    "answer_pass_rate": 0.64
+  },
+  "failure_analysis": {
+    "top_failure_categories": [
+      {
+        "category": "answer_failure",
+        "count": 9
+      }
+    ]
+  },
+  "latency": {
+    "average_ms": 5571.77,
+    "minimum_ms": 2092.78,
+    "maximum_ms": 17266.34,
+    "measured_cases": 25
+  },
+  "cost_proxy": {
+    "metric": "evaluation_case_count",
+    "value": 25,
+    "description": "Simple proxy for evaluation workload; not an actual monetary API cost."
+  }
+}
