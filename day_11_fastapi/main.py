@@ -6,7 +6,7 @@ from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
 
 from day_11_fastapi.routes import router
-
+from day_15_adversarial.guardrail_log import log_guardrail
 
 app = FastAPI(
     title="Employee RAG API",
@@ -26,6 +26,14 @@ async def validation_exception_handler(
         "request_id",
         str(uuid.uuid4())
     )
+
+    log_guardrail(
+        case_id="API",
+        control="input_validation",
+        outcome="blocked",
+        reason_code="invalid_request"
+    )
+
 
     return JSONResponse(
         status_code=422,

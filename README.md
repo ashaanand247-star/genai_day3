@@ -1062,3 +1062,111 @@ Regression Checks
        ↓
 PASS / FAIL
 ```
+---
+
+# Day 15 — Adversarial Security Testing
+
+## Objective
+
+Test the RAG system against intentionally malicious, misleading, malformed, and unsupported inputs to identify security weaknesses and unsafe behavior.
+
+Day 15 focuses on whether the system can distinguish legitimate employee questions from requests that attempt to manipulate the RAG pipeline or bypass its safety and evidence controls.
+
+## What Was Completed
+
+### 1. Adversarial Test Dataset
+
+Created:
+
+`day_15_adversarial/adversarial_test_set.jsonl`
+
+The dataset contains 10 adversarial test cases:
+
+- `ADV001`
+- `ADV002`
+- `ADV003`
+- `ADV004`
+- `ADV005`
+- `ADV006`
+- `ADV007`
+- `ADV008`
+- `ADV009`
+- `ADV010`
+
+The cases were designed to test different failure and attack patterns, including:
+
+- Prompt injection
+- Attempts to override system instructions
+- Hidden instructions inside retrieved context
+- Requests for restricted or unsupported information
+- False or conflicting context
+- Unsupported requests
+- Malformed input
+- Excessive or unusual input
+- Attempts to force the model to ignore retrieved evidence
+
+### 2. Adversarial Test Runner
+
+Created:
+
+`day_15_adversarial/run_baseline.py`
+
+The runner sends the adversarial cases through the existing FastAPI `/ask` endpoint and records the resulting behavior.
+
+The test reuses the existing RAG pipeline instead of creating a separate security pipeline.
+
+Evaluation flow:
+
+```text
+Adversarial Test Set
+        |
+        v
+run_baseline.py
+        |
+        v
+FastAPI /ask
+        |
+        v
+Existing RAG Pipeline
+        |
+        v
+Response Classification
+        |
+        v
+Baseline Security Report
+
+---
+
+# Day 16 — False Accept / False Reject Measurement
+
+## Objective
+
+Day 16 measures whether the RAG system makes the correct decision about whether a question should be answered or rejected.
+
+The goal is to distinguish between:
+
+- **False Accept** — The system answered a question that should have been rejected.
+- **False Reject** — The system rejected a question that should have been answered.
+- **Correct Accept** — The system answered a question that was expected to be answerable.
+- **Correct Reject** — The system rejected a question that was expected to be unanswerable or unsafe.
+- **Error** — The evaluation could not determine the accept/reject behavior because the API or upstream provider failed.
+
+This provides a security-oriented measurement of the RAG system's decision behavior.
+
+## What Was Completed
+
+### 1. Combined Evaluation
+
+Day 16 combines:
+
+- The 25-case golden evaluation dataset from Day 13
+- The 10-case adversarial dataset from Day 15
+
+Total evaluation workload:
+
+```text
+25 Golden Cases
++
+10 Adversarial Cases
+--------------------
+35 Total Cases

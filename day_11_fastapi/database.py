@@ -16,6 +16,10 @@ def create_tables():
     connection = get_connection()
     cursor = connection.cursor()
 
+    # --------------------------------------------------------
+    # Request-level observability
+    # --------------------------------------------------------
+
     cursor.execute(
         """
         CREATE TABLE IF NOT EXISTS requests (
@@ -31,6 +35,10 @@ def create_tables():
         """
     )
 
+    # --------------------------------------------------------
+    # Retrieved sources
+    # --------------------------------------------------------
+
     cursor.execute(
         """
         CREATE TABLE IF NOT EXISTS retrieved_sources (
@@ -38,6 +46,28 @@ def create_tables():
             request_id TEXT NOT NULL,
             source_id TEXT NOT NULL,
             score REAL,
+            FOREIGN KEY (request_id)
+                REFERENCES requests(request_id)
+                ON DELETE CASCADE
+        )
+        """
+    )
+
+    # --------------------------------------------------------
+    # Day 17 voice observability
+    # --------------------------------------------------------
+
+    cursor.execute(
+        """
+        CREATE TABLE IF NOT EXISTS voice_requests (
+            request_id TEXT PRIMARY KEY,
+            stt_latency_ms REAL,
+            rag_latency_ms REAL,
+            transcription_model TEXT,
+            language TEXT,
+            transcript TEXT,
+            outcome TEXT NOT NULL,
+            error_category TEXT,
             FOREIGN KEY (request_id)
                 REFERENCES requests(request_id)
                 ON DELETE CASCADE
@@ -114,6 +144,48 @@ def log_retrieved_sources(
                 score
             )
         )
+
+    connection.commit()
+    connection.close()
+
+
+def log_voice_request(
+    request_id,
+    stt_latency_ms,
+    rag_latency_ms,
+    transcription_model,
+    language,
+    transcript,
+    outcome,
+    error_category=None
+):
+    connection = get_connection()
+
+    connection.execute(
+        """
+        INSERT OR REPLACE INTO voice_requests (
+            request_id,
+            stt_latency_ms,
+            rag_latency_ms,
+            transcription_model,
+            language,
+            transcript,
+            outcome,
+            error_category
+        )
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        """,
+        (
+            request_id,
+            stt_latency_ms,
+            rag_latency_ms,
+            transcription_model,
+            language,
+            transcript,
+            outcome,
+            error_category
+        )
+    )
 
     connection.commit()
     connection.close()

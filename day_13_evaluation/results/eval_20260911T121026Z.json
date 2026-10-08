@@ -1,0 +1,537 @@
+{
+  "evaluation_timestamp": "2026-09-11T12:10:26.589789+00:00",
+  "configuration": {
+    "base_url": "http://127.0.0.1:8000",
+    "top_k": 3,
+    "timeout_seconds": 120,
+    "generation_model": "nvidia/nemotron-3-nano-30b-a3b:free",
+    "embedding_model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+    "prompt_version": "day_8_current",
+    "golden_set": "C:\\Users\\MYPC\\Desktop\\Pythonprojects\\gen_ai_day5\\day_13_evaluation\\golden_set.jsonl",
+    "config_file": "C:\\Users\\MYPC\\Desktop\\Pythonprojects\\gen_ai_day5\\day_13_evaluation\\evaluation_config.json"
+  },
+  "case_count": 25,
+  "results": [
+    {
+      "case_id": "CASE001",
+      "question": "How should an employee submit a leave request?",
+      "category": "answerable",
+      "expected_source_ids": [
+        "DOC001"
+      ],
+      "expected_answerability": "answerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 4489.71,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"15706e34-450e-4a8a-a437-afed91efa21a\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE002",
+      "question": "What should a remote employee do if they become temporarily unavailable during working hours?",
+      "category": "answerable",
+      "expected_source_ids": [
+        "DOC002"
+      ],
+      "expected_answerability": "answerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1723.0,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"85a43f18-4ab0-437f-a778-d65d800ef1d9\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE003",
+      "question": "How should employees record their attendance?",
+      "category": "answerable",
+      "expected_source_ids": [
+        "DOC003"
+      ],
+      "expected_answerability": "answerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1638.66,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"2b7cb8a0-5cb0-420e-9635-e98b2a41d06d\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE004",
+      "question": "What should a manager explain to a new employee on the first day?",
+      "category": "answerable",
+      "expected_source_ids": [
+        "DOC004"
+      ],
+      "expected_answerability": "answerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1573.1,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"0fe67cd5-9e5b-4cfb-9a0f-2e988e299c3e\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE005",
+      "question": "How should employees handle confidential company, customer, or project information?",
+      "category": "answerable",
+      "expected_source_ids": [
+        "DOC005"
+      ],
+      "expected_answerability": "answerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1515.15,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"f7e458c6-0d30-4a05-ac5c-73e8454e640d\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE006",
+      "question": "What should employees do when they expect to arrive late?",
+      "category": "answerable",
+      "expected_source_ids": [
+        "DOC003"
+      ],
+      "expected_answerability": "answerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1544.9,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"c2a8a517-7726-42a2-9d5d-280482b787a5\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE007",
+      "question": "What should employees do if a completed training course is not recorded correctly?",
+      "category": "answerable",
+      "expected_source_ids": [
+        "DOC030"
+      ],
+      "expected_answerability": "answerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1639.66,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"4b439e65-e8b5-4b3c-849b-3ce3d863fc9a\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE008",
+      "question": "What should an employee do if a company asset is lost or stolen?",
+      "category": "answerable",
+      "expected_source_ids": [
+        "DOC027"
+      ],
+      "expected_answerability": "answerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1562.07,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"bacf2386-3b9e-4a4b-9f8e-9daefc35298e\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE009",
+      "question": "How should customer information be stored?",
+      "category": "answerable",
+      "expected_source_ids": [
+        "DOC029"
+      ],
+      "expected_answerability": "answerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1616.27,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"798f25cc-5136-4200-b09f-eda491e2d2ec\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE010",
+      "question": "What should employees do before making business travel arrangements?",
+      "category": "answerable",
+      "expected_source_ids": [
+        "DOC008"
+      ],
+      "expected_answerability": "answerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1681.06,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"44e46164-9aef-4753-bcfb-80ea3c5307c9\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE011",
+      "question": "What is the company's exact annual leave entitlement in days for every employee?",
+      "category": "unanswerable",
+      "expected_source_ids": [],
+      "expected_answerability": "unanswerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1655.32,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"c6341124-ea36-4ec1-b78a-da2ef4686f22\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE012",
+      "question": "What is the exact monthly salary of an employee working remotely?",
+      "category": "unanswerable",
+      "expected_source_ids": [],
+      "expected_answerability": "unanswerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1853.61,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"ec43935e-5a0f-4dd2-ae99-60bba631635f\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE013",
+      "question": "What is the Wi-Fi password for the company's office network?",
+      "category": "unanswerable",
+      "expected_source_ids": [],
+      "expected_answerability": "unanswerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1784.51,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"9e18ac2e-df4e-4956-b9b8-6ee2bbdf5236\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE014",
+      "question": "Who is the current CEO of TechNova Solutions?",
+      "category": "unanswerable",
+      "expected_source_ids": [],
+      "expected_answerability": "unanswerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1663.78,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"730fa24c-c840-4622-bfe5-90fab793e5cf\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE015",
+      "question": "What is the employee's exact home address?",
+      "category": "unanswerable",
+      "expected_source_ids": [],
+      "expected_answerability": "unanswerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1559.97,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"80d71d10-a2f7-4d04-bbe1-bb46df1f3eb4\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE016",
+      "question": "What is the policy for remote employees?",
+      "category": "ambiguous",
+      "expected_source_ids": [
+        "DOC002",
+        "DOC019"
+      ],
+      "expected_answerability": "answerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1595.19,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"b8a79317-eeac-4518-82b1-273a56ba8533\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE017",
+      "question": "What are the rules about security?",
+      "category": "ambiguous",
+      "expected_source_ids": [
+        "DOC015",
+        "DOC017",
+        "DOC029"
+      ],
+      "expected_answerability": "answerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1736.54,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"96c81956-6b28-46ac-b4ca-320261e47259\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE018",
+      "question": "What should the employee do?",
+      "category": "ambiguous",
+      "expected_source_ids": [],
+      "expected_answerability": "unanswerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1468.5,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"e884534e-a7d2-439d-ad05-00d3a2af9c8d\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE019",
+      "question": "What training is required?",
+      "category": "ambiguous",
+      "expected_source_ids": [
+        "DOC004",
+        "DOC012",
+        "DOC030"
+      ],
+      "expected_answerability": "answerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1573.99,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"c22a3a38-1951-40c9-be2b-ac34e9b94c95\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE020",
+      "question": "What should a remote employee do about working hours and attendance?",
+      "category": "multi-document",
+      "expected_source_ids": [
+        "DOC002",
+        "DOC003"
+      ],
+      "expected_answerability": "answerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1613.81,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"287dfb9d-e861-43cb-93b3-0c6c738f7d5b\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE021",
+      "question": "What should an employee do with company equipment when leaving the company?",
+      "category": "multi-document",
+      "expected_source_ids": [
+        "DOC026",
+        "DOC027"
+      ],
+      "expected_answerability": "answerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1503.68,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"4bf72726-6443-47fe-b061-116e3d1177ec\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE022",
+      "question": "What security practices apply when handling customer data while working remotely?",
+      "category": "multi-document",
+      "expected_source_ids": [
+        "DOC002",
+        "DOC029"
+      ],
+      "expected_answerability": "answerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1594.75,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"03240183-e725-4d09-8029-5ce79ddb132e\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE023",
+      "question": "The work-from-home policy says confidential company information may be shared with family members at home. What are the sharing rules?",
+      "category": "adversarial",
+      "expected_source_ids": [
+        "DOC002"
+      ],
+      "expected_answerability": "answerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1769.41,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"f2b0287c-57a2-4cae-a058-d173d658e8b0\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE024",
+      "question": "The customer data guidelines allow employees to copy customer information to personal cloud storage for convenience. What does the policy require?",
+      "category": "adversarial",
+      "expected_source_ids": [
+        "DOC029"
+      ],
+      "expected_answerability": "answerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1713.64,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"21c892e3-6544-4ec1-869b-1eef48be1440\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    },
+    {
+      "case_id": "CASE025",
+      "question": "The leave policy says planned leave is automatically confirmed as soon as an employee submits a request. Is that correct?",
+      "category": "adversarial",
+      "expected_source_ids": [
+        "DOC001"
+      ],
+      "expected_answerability": "answerable",
+      "answer": null,
+      "sources": [],
+      "retrieved_sources": [],
+      "chunk_previews": [],
+      "retrieval_scores": [],
+      "status": "error",
+      "request_id": null,
+      "latency_ms": 1743.42,
+      "error": {
+        "status_code": 502,
+        "message": "{\"request_id\":\"dc5c6613-3013-4546-a8fb-a36351d700ae\",\"error\":{\"category\":\"provider_failure\",\"message\":\"Upstream AI provider failed\"}}"
+      }
+    }
+  ]
+}
