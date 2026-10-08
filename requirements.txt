@@ -1,2 +1,7 @@
-openai
-python-dotenv
+openai==2.53.0
+python-dotenv==1.2.2
+fastapi==0.141.1
+uvicorn==0.52.3
+chromadb==1.5.9
+faster-whisper==1.2.1
+pytest
