@@ -5,3 +5,4 @@ uvicorn==0.52.3
 chromadb==1.5.9
 faster-whisper==1.2.1
 pytest
+python-multipart==0.0.32
